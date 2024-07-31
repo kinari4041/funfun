@@ -1,6 +1,0 @@
-{
-    "liveServer.settings.CustomBrowser": "chrome",
-    "remote.SSH.remotePlatform": {
-        "kinari.ink": "linux"
-    }
-}
