@@ -1,0 +1,25 @@
+{
+    "editor.linkedEditing": true,
+    "livePreview.customExternalBrowser": "Chrome",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "powermode.enabled": true,
+    "powermode.combo.location": "off",
+    "powermode.shake.intensity": 2,
+    "powermode.explosions.frequency": 1,
+    "powermode.explosions.explosionOrder": "random",
+    "powermode.explosions.size": 10,
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "'Nanum Gothic' ",
+    "redhat.telemetry.enabled": true,
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-17",
+          "path": "D:/dev/jdk17",
+          "default": true
+        }
+    ],
+    "remote.SSH.remotePlatform": {
+      "kinari.ink": "linux",
+      "team-1st": "linux"
+    }
+}

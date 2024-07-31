@@ -1,0 +1,20 @@
+2024-07-29 15:55:47.465 [info] 로그 수준: Info
+2024-07-29 15:55:47.465 [info] "git"에서 찾은 git 유효성을 검사하는 중
+2024-07-29 15:55:47.465 [info] "2.34.1"에서 git "git"을(를) 사용하는 중
+2024-07-29 15:55:47.477 [info] > git rev-parse --show-toplevel [19ms]
+2024-07-29 15:55:47.478 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.481 [info] > git rev-parse --show-toplevel [1ms]
+2024-07-29 15:55:47.481 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.486 [info] > git rev-parse --show-toplevel [1ms]
+2024-07-29 15:55:47.486 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.491 [info] > git rev-parse --show-toplevel [1ms]
+2024-07-29 15:55:47.491 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.493 [info] > git rev-parse --show-toplevel [1ms]
+2024-07-29 15:55:47.493 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.496 [info] > git rev-parse --show-toplevel [0ms]
+2024-07-29 15:55:47.496 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.498 [info] > git rev-parse --show-toplevel [1ms]
+2024-07-29 15:55:47.498 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:55:47.650 [info] > git rev-parse --show-toplevel [1ms]
+2024-07-29 15:55:47.650 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-07-29 15:56:55.987 [warning] Failed to get repository realpath for: "/var/www/1st.kinari.ink/.vscode-server/cli/servers/Stable-ea1445cc7016315d0f5728f8e8b12a45dc0a7286.staging/server/extensions/github/testWorkspace/". Error: ENOENT: no such file or directory, realpath '/var/www/1st.kinari.ink/.vscode-server/cli/servers/Stable-ea1445cc7016315d0f5728f8e8b12a45dc0a7286.staging/server/extensions/github/testWorkspace/'

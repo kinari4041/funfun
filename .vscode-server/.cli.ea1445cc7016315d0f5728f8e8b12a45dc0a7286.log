@@ -1,0 +1,6 @@
+Listening on 127.0.0.1:14295
+[2024-07-29 15:57:09] info Disposed of connection to running server.
+looking for token afcd4d0f-ae1d-4527-9967-8901bef556e7, got Some("afcd4d0f-ae1d-4527-9967-8901bef556e7")
+[2024-07-29 15:57:09] info Checking /var/www/1st.kinari.ink//.vscode-server/cli/servers/Stable-ea1445cc7016315d0f5728f8e8b12a45dc0a7286/log.txt and /var/www/1st.kinari.ink//.vscode-server/cli/servers/Stable-ea1445cc7016315d0f5728f8e8b12a45dc0a7286/pid.txt for a running server...
+[2024-07-29 15:57:09] info Found running server (pid=265608)
+[2024-07-29 16:05:51] info Disposed of connection to running server.

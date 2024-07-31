@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Default High Contrast",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmPasteNative": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.allowedUNCHosts": [
+        "192.168.1.100"
+    ],
+    "liveServer.settings.donotVerifyTags": true,
+    "explorer.confirmDelete": false,
+    "redhat.telemetry.enabled": true,
+    "remote.SSH.remotePlatform": {
+        "kinari.ink": "linux"
+    }
+}
