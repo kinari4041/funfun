@@ -9,6 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
         <!-- 외부 css 스타일 시트 적용 -->
         <link rel="stylesheet" href="./css/style.css">
+        <!-- fontawesome 아이콘 가져오기 -->
+        <script src="https://kit.fontawesome.com/d7e414b2e7.js" crossorigin="anonymous"></script>
         <title> FUNFUN - 펀딩을 재밌게! </title>
     </head>
     <body>
@@ -19,35 +21,42 @@
                 <!-- 로고, 타이틀 wrapper -->
                 <div class="title wrapper">
                     <!-- 로고 영역 -->
-                    <div class="img-logo"></div>
+                    <div class="img-logo">◆</div>
                     <!-- 타이틀 영역 -->
-                    <div class="title"></div>
+                    <div class="title">FUNFUN</div>
                 </div>
                 <!-- 최상단 메뉴 영역 -->
                 <div class="top-menu wrapper"></div>
                 <!-- 검색바 영역 -->
-                <div class="search-bar"></div>
+                <div class="search-bar">
+                    <input type="search" name="" id="" placeholder="검색">
+                </div>
                 <!-- 로그인 버튼 -->
-                <div class="btn-login"></div>
-            </div>
-            <!-- 금주 인기 프로젝트 영역 -->
-            <div class="popular-projects">
-
+                <div class="login-button wrapper">
+                    <a href="#">
+                        <div id="btn-login"></div>
+                    </a>
+                </div>
             </div>
         </header> <!-- 헤더 영역 종료 -->
+        <!-- 메인 화면 영역 -->
+        <main>
+            <!-- 금주 인기 프로젝트 영역 -->
+            <div class="popular-projects">
+                인기 프로젝트
+            </div>
         <!-- 네비게이션 바 -->
         <nav>
-            <!-- 네비게이션 바 아이콘 -->
-            <div class="icon-nav-more">
-
+            <div class="nav-more-icon">
+                <i class="fa-solid fa-bars"></i>
             </div>
             <!-- 네비게이션 메뉴바 화면 -->
-            <div class="nav-more">
+            <div class="nav-bar">
                 <!-- 네비게이션 메뉴바 대분류 -->
                 <div class="nav-menu wrapper">
                     <!-- 대분류 항목 리스트 -->
                     <ul>
-                        <li>애완동물</li>
+                        <li>반려동물</li>
                         <li>헬스케어</li>
                         <li>디지털 미디어</li>
                         <li>향초</li>
@@ -58,7 +67,7 @@
                 <!-- 아이콘에 마우스 올릴 시 추가적으로 표시될 소분류 화면 -->
                 <div class="nav-menu-hover">
                     <!-- 추가 화면 네비게이션 메뉴바 소분류 -->
-                    <div class="nav-menu more-list wrapper">
+                    <div class="more-list wrapper">
                         <!-- 소분류 항목 리스트 -->
                         <ul>
                             <li>펫 의류</li>
@@ -73,14 +82,13 @@
                 </div> <!-- 소분류 화면 종료 -->
             </div>
         </nav> <!-- 네비게이션 영역 종료 -->
-        <!-- 메인 화면 영역 -->
-        <main>
             <!-- 추천 프로젝트(광고) 영역 -->
             <section id="ad-recommand-projects">
-                
+                추천 포스트 (광고)
             </section>
             <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
             <div id="section-content wrapper">
+                <div class="project-lists">
                 <!-- 주제별 프로젝트 영역 -->
                 <section id="cate-project-list">
                     <!-- 주제별 프로젝트 목록 영역 / 반복 총 6개 -->
@@ -105,8 +113,10 @@
                         <div class="recent-project desc"></div>
                     </div>
                 </section>
+            </div>
                 <!-- 사이드바 영역 -->
                 <aside>
+                    사이드바
                     <!-- 여기에 사이드바 입력 -->
                 </aside>
             </div>            
@@ -141,7 +151,7 @@
                 <!-- 고객 지원센터 영역 -->
                  <div class="help-center wrapper">
                     <!-- 지원센터 타이틀 영역 -->
-                    <div class="help-center title">
+                    <div class="help-center help-title">
                         <p>고객 지원센터</p>
                         <p>상담시간: 평일 00:00 ~ 00:00</p>
                         <p>(주말, 공휴일 휴무)</p>
@@ -162,11 +172,10 @@
                 </div>
                 <!-- SNS 아이콘 목록 영역 -->
                 <div class="social-icons wrapper">
-                    <ul>
-                        <li><a href="#"><img src="#" alt="#"></a></li>
-                        <li><a href="#"><img src="#" alt="#"></a></li>
-                        <li><a href="#"><img src="#" alt="#"></a></li>
-                        <li><a href="#"><img src="#" alt="#"></a></li>
+                    <ul class="social-icon-list">
+                        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>
