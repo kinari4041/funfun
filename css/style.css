@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Nanum Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -24,53 +23,128 @@ li {
     list-style: none;
 }
 
-.wrapper::before {
-    clear: both;
+
+img {
+    object-fit: cover;
 }
 
 /* 공용 css 리소스 끝 */
 
 html {
     width: 100%;
-    height: 100%;
+    height: max-content;
 }
 
 body {
     width: 100%;
-    height: 100%;
-    overflow: auto;
+    height: max-content;
+    margin-top: 80px;
 }
 
 header {
+    position: absolute;
+    top: 0px;
     width: 100%;
-    background-color: #eee;
-    
+    background-color: #fff;
+    box-shadow: -1px 11px 31px 1px rgba(0, 0, 0, 0.192);
 }
 
 .top-nav {
     width: 100%;
     display: flex;
-    height: 100px;
-    background-color: #ddd;
-}
-
-.title {
-    display:flex;
-    font-size: 30px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.popular-projects {
+.top-nav-title {
+    margin-left: 50px;
+    display:flex;
+    align-items: center;
+}
+
+.img-logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.site-title-wrap {
+    margin-left: 15px;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.top-menu {
+    display: flex;
+}
+
+.search-bar {
+    margin-right: 50px;
+}
+
+.search-bar input {
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid #888;
+    padding-left: 20px;
+    width: 340px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.login-button {
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #888;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button:hover {
+    background-color: #ddd;
+    transition: all .3s ease-in;
+}
+
+#btn-login {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#popular-projects {
     width: 100%;
     height: 400px;
     background-color: #ccc;
 }
 
+#popular-projects img {
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.popular-projects-title {
+    z-index: 5;
+}
+
+
 main {
     max-width: 1330px;
-    height: max-content;
+    height: 3000px;
     margin: 0 auto;
-    background-color: #ddd;
 }
 
 nav {
@@ -98,32 +172,61 @@ nav {
     content: none;
 }
 
-.project-lists {
-    float: left;
-    width: 70%;
-}
-
-.more-list {
-    display: none;
-}
-
 #ad-recommand-projects {
     background-color: #aaa;
     height: 300px;
     width: 100%;
 }
 
+/* 추천 프로젝트(광고) 하단부분 */
+#section-content {
+    background-color: white;
+    width: 70%;
+    height: 100%;
+}
+
+/* 사이드바 영역 */
 aside {
     float: right;
-    width: 30%;
+    width: 15%;
     background-color: #888;
 }
 
-footer {
-    background-color: #ddd;
+/* 메인 카테고리별 프로젝트 리스트 */
+#main-cate-project-area {
+    display: flex;
+    border-radius: 30px;
+    border:1px solid #eee;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.footer-guide-area {
+.project-cate {
+    width: 250px;
+}
+
+/* .project-cate-img .thumb {
+    width: 100%;
+} */
+
+/* 최근 오픈한 펀딩 프로젝트 리스트 */
+#recent-project-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 하단 푸터 영역 */
+footer {
+    height: 300px;
+}
+
+.footer-top-area {
     width: 100%;
     height: 200px;
     background-color: #bbb;

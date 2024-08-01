@@ -19,31 +19,38 @@
             <!-- 최상단 로고/타이틀 및 검색, 로그인 화면 영역 -->
             <div class="top-nav">
                 <!-- 로고, 타이틀 wrapper -->
-                <div class="title wrapper">
+                <div class="top-nav-title wrapper">
                     <!-- 로고 영역 -->
-                    <div class="img-logo">◆</div>
+                    <div class="img-logo"><i class="fa-regular fa-face-smile-wink"></i></div>
                     <!-- 타이틀 영역 -->
-                    <div class="title">FUNFUN</div>
+                     <div class="site-title-wrap">
+                        <p class="sub-title">
+                            펀딩을 재밌게!
+                        </p>
+                        <p class="site-title">FUNFUN</p>
+                     </div>
                 </div>
                 <!-- 최상단 메뉴 영역 -->
-                <div class="top-menu wrapper"></div>
+                <div class="top-menu wrapper">
                 <!-- 검색바 영역 -->
                 <div class="search-bar">
-                    <input type="search" name="" id="" placeholder="검색">
+                    <input type="search" name="" id="" placeholder="프로젝트 검색하기">
                 </div>
                 <!-- 로그인 버튼 -->
                 <div class="login-button wrapper">
                     <a href="#">
-                        <div id="btn-login"></div>
+                        <div id="btn-login">로그인</div>
                     </a>
                 </div>
+            </div>
             </div>
         </header> <!-- 헤더 영역 종료 -->
         <!-- 메인 화면 영역 -->
         <main>
             <!-- 금주 인기 프로젝트 영역 -->
-            <div class="popular-projects">
-                인기 프로젝트
+            <div id="popular-projects">
+                <img src="https://picsum.photos/1920/1080?random=1">
+                <p class="popular-projects-title"> 금주의 인기 프로젝트 </p>
             </div>
         <!-- 네비게이션 바 -->
         <nav>
@@ -82,48 +89,89 @@
                 </div> <!-- 소분류 화면 종료 -->
             </div>
         </nav> <!-- 네비게이션 영역 종료 -->
+
             <!-- 추천 프로젝트(광고) 영역 -->
             <section id="ad-recommand-projects">
                 추천 포스트 (광고)
             </section>
+            
             <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
             <div id="section-content wrapper">
-                <div class="project-lists">
-                <!-- 주제별 프로젝트 영역 -->
-                <section id="cate-project-list">
-                    <!-- 주제별 프로젝트 목록 영역 / 반복 총 6개 -->
-                    <div class="project-cate">
-                        <!-- 이미지 썸네일 영역 -->
-                        <div class="project-cate img thumb"></div>
-                        <!-- 프로젝트 제목 영역 -->
-                        <div class="project-cate title"></div>
-                        <!-- 프로젝트 요약 설명 영역 -->
-                        <div class="project-cate desc"></div>
-                    </div>
-                </section>
-                <!-- 최근 프로젝트 영역 -->
-                <section id="recent-projects">
-                    <!-- 최근 프로젝트 목록 영역 / 최대 10개 반복, 슬라이딩 -->
-                    <div class="recent-project wrapper">
-                        <!-- 최근 프로젝트 목록 이미지 썸네일 -->
-                        <div class="recent-project img thumb"></div>
-                        <!-- 프로젝트 제목 영역 -->
-                        <div class="recent-project title"></div>
-                        <!-- 프로젝트 요약 설명 영역 -->
-                        <div class="recent-project desc"></div>
-                    </div>
-                </section>
-            </div>
+                
                 <!-- 사이드바 영역 -->
                 <aside>
                     사이드바
                     <!-- 여기에 사이드바 입력 -->
                 </aside>
-            </div>            
+
+                <section id="main-cate-project-area">
+                    <!-- 주제별 프로젝트 목록 영역 / 반복 총 6개 -->
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate-img thumb"><img src="https://picsum.photos/300/300?random=1"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate-title">프로젝트 제목</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate-img thumb"><img src="https://picsum.photos/300/300?random=2"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate-title">프로젝트 제목</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate-img thumb"><img src="https://picsum.photos/300/300?random=3"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate-title">프로젝트 제목</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate-img thumb"><img src="https://picsum.photos/300/300?random=4"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate-title">프로젝트 제목</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate-img thumb"><img src="https://picsum.photos/300/300?random=5"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate-title">프로젝트 제목</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate-img thumb"><img src="https://picsum.photos/300/300?random=6"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate-title">프로젝트 제목</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                </section>
+                <!-- 최근 프로젝트 영역 -->
+                <section id="recent-project-area">
+                    <!-- 최근 프로젝트 목록 영역 / 최대 10개 반복, 슬라이딩 -->
+                    <div class="recent-project wrapper">
+                        <!-- 최근 프로젝트 목록 이미지 썸네일 -->
+                        <div class="recent-project img thumb"><img src="https://picsum.photos/250/250?random=1"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="recent-project-title">프로젝트 1</div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="recent-project desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                </section>
+            </div>      
         </main>
         <footer>
             <!-- 푸터, 사이트 추가 메뉴 영역 -->
-            <div class="footer-guide-area">
+            <div class="footer-top-area">
                 <!-- 추가 메뉴 영역 -->
                 <div class="footer-menu">   
                     <!-- 사이트 안내 메뉴 목록 영역 -->
