@@ -4,15 +4,172 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- 나눔고딕 구글 폰트 -->
-        <link rel="icon" href="./img/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"     rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
         <!-- 외부 css 스타일 시트 적용 -->
         <link rel="stylesheet" href="./css/style.css">
-        <title> 타이틀 변경하기 테스트 </title>
+        <title> FUNFUN - 펀딩을 재밌게! </title>
     </head>
     <body>
-        <script type="module" src="./script/app.js"></script>
+        <!-- 헤더 영역 -->
+        <header>
+            <!-- 최상단 로고/타이틀 및 검색, 로그인 화면 영역 -->
+            <div class="top-nav">
+                <!-- 로고, 타이틀 wrapper -->
+                <div class="title wrapper">
+                    <!-- 로고 영역 -->
+                    <div class="img-logo"></div>
+                    <!-- 타이틀 영역 -->
+                    <div class="title"></div>
+                </div>
+                <!-- 최상단 메뉴 영역 -->
+                <div class="top-menu wrapper"></div>
+                <!-- 검색바 영역 -->
+                <div class="search-bar"></div>
+                <!-- 로그인 버튼 -->
+                <div class="btn-login"></div>
+            </div>
+            <!-- 금주 인기 프로젝트 영역 -->
+            <div class="popular-projects">
+
+            </div>
+        </header> <!-- 헤더 영역 종료 -->
+        <!-- 네비게이션 바 -->
+        <nav>
+            <!-- 네비게이션 바 아이콘 -->
+            <div class="icon-nav-more">
+
+            </div>
+            <!-- 네비게이션 메뉴바 화면 -->
+            <div class="nav-more">
+                <!-- 네비게이션 메뉴바 대분류 -->
+                <div class="nav-menu wrapper">
+                    <!-- 대분류 항목 리스트 -->
+                    <ul>
+                        <li>애완동물</li>
+                        <li>헬스케어</li>
+                        <li>디지털 미디어</li>
+                        <li>향초</li>
+                        <li>커피</li>
+                        <li>식품</li>
+                    </ul>
+                </div>
+                <!-- 아이콘에 마우스 올릴 시 추가적으로 표시될 소분류 화면 -->
+                <div class="nav-menu-hover">
+                    <!-- 추가 화면 네비게이션 메뉴바 소분류 -->
+                    <div class="nav-menu more-list wrapper">
+                        <!-- 소분류 항목 리스트 -->
+                        <ul>
+                            <li>펫 의류</li>
+                            <li>펫 사료</li>
+                            <li>펫 놀이기구</li>
+                            <li>펫 관리용품</li>
+                            <li>LOREM</li>
+                            <li>LOREM</li>
+                        </ul>
+                        <!-- 이후 반복 -->
+                    </div>
+                </div> <!-- 소분류 화면 종료 -->
+            </div>
+        </nav> <!-- 네비게이션 영역 종료 -->
+        <!-- 메인 화면 영역 -->
+        <main>
+            <!-- 추천 프로젝트(광고) 영역 -->
+            <section id="ad-recommand-projects">
+                
+            </section>
+            <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
+            <div id="section-content wrapper">
+                <!-- 주제별 프로젝트 영역 -->
+                <section id="cate-project-list">
+                    <!-- 주제별 프로젝트 목록 영역 / 반복 총 6개 -->
+                    <div class="project-cate">
+                        <!-- 이미지 썸네일 영역 -->
+                        <div class="project-cate img thumb"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="project-cate title"></div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="project-cate desc"></div>
+                    </div>
+                </section>
+                <!-- 최근 프로젝트 영역 -->
+                <section id="recent-projects">
+                    <!-- 최근 프로젝트 목록 영역 / 최대 10개 반복, 슬라이딩 -->
+                    <div class="recent-project wrapper">
+                        <!-- 최근 프로젝트 목록 이미지 썸네일 -->
+                        <div class="recent-project img thumb"></div>
+                        <!-- 프로젝트 제목 영역 -->
+                        <div class="recent-project title"></div>
+                        <!-- 프로젝트 요약 설명 영역 -->
+                        <div class="recent-project desc"></div>
+                    </div>
+                </section>
+                <!-- 사이드바 영역 -->
+                <aside>
+                    <!-- 여기에 사이드바 입력 -->
+                </aside>
+            </div>            
+        </main>
+        <footer>
+            <!-- 푸터, 사이트 추가 메뉴 영역 -->
+            <div class="footer-guide-area">
+                <!-- 추가 메뉴 영역 -->
+                <div class="footer-menu">   
+                    <!-- 사이트 안내 메뉴 목록 영역 -->
+                    <h3>Team 1st</h3>
+                    <ul>
+                        <li>FUNFUN</li>
+                        <li>공지사항</li>
+                        <li>서비스 소개</li>
+                        <li>광고센터</li>
+                    </ul>
+                    <ul>
+                        <li>이용안내</li>
+                        <li>가이드</li>
+                        <li>창작자 가이드</li>
+                        <li>수수료 안내</li>
+                    </ul>
+                    <ul>
+                        <li>정책</li>
+                        <li>개인정보처리방침</li>
+                        <li>심사 기준</li>
+                        <li>이용 정책</li>
+                    </ul>
+                    <!-- 메뉴가 추가될 경우 이곳에 추가 -->
+                </div>
+                <!-- 고객 지원센터 영역 -->
+                 <div class="help-center wrapper">
+                    <!-- 지원센터 타이틀 영역 -->
+                    <div class="help-center title">
+                        <p>고객 지원센터</p>
+                        <p>상담시간: 평일 00:00 ~ 00:00</p>
+                        <p>(주말, 공휴일 휴무)</p>
+                    </div>
+                    <!-- 문의하기 버튼 영역 -->
+                    <div class="support-button-area">
+                        <a href="#"> <!-- 문의하기 화면 링크 -->
+                            <div class="btn-support">문의하기</div>
+                        </a>
+                    </div>
+                 </div>
+            </div>
+            <!-- 푸터 하단, 저작권 및 SNS 링크 영역 -->
+            <div class="footer-bottom-area">
+                <!-- 저작권 설명 영역 -->
+                <div class="footer-copyright">
+                    <p>회사명 (주) FUNFUN Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto, pariatur suscipit laudantium eaque minus repellat repellendus velit a, officia doloremque fugit quibusdam neque optio! Non a quis perspiciatis dolore.</p>
+                </div>
+                <!-- SNS 아이콘 목록 영역 -->
+                <div class="social-icons wrapper">
+                    <ul>
+                        <li><a href="#"><img src="#" alt="#"></a></li>
+                        <li><a href="#"><img src="#" alt="#"></a></li>
+                        <li><a href="#"><img src="#" alt="#"></a></li>
+                        <li><a href="#"><img src="#" alt="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
