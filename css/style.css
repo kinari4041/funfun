@@ -164,11 +164,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s ease-in;
 }
 
 .login-button:hover {
     background-color: #ddd;
-    transition: all .3s ease-in;
 }
 
 #btn-login {
@@ -224,6 +224,7 @@ nav {
     height: 110px;
     padding-top: 5px;
     border-radius: 20px;
+    transition: all .2s ease;
 }
 
 .nav-menu-icon-box:hover {
@@ -279,51 +280,70 @@ aside {
     border-radius: 30px;
     box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.192);
     position: sticky;
-    top: 15%;
-    height: fit-content;
+    position: -webkit-sticky;
+    top: 30px;
     width: 280px;
-    display: grid;
+    height: fit-content;
     padding-left: 15px;
+    overflow: auto;
+    padding: 30px;
 }
 
-.container {
-    width: 435px;
-    margin: 20px auto;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 20px;
-}
-.category {
-    padding: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-.category i {
-    margin-right: 10px;
-    font-size: 20px;
+/* 사이드바 드롭다운 메뉴 영역: 대분류 */
+.side-bar-dropdown {
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: #ddd;
 }
 
-.category p {
-    font-weight: bold;
+.side-bar-dropdown:last-of-type {
+    margin-bottom: 0px;
 }
 
-.category p > i {
-    margin-left: 30px;
-    font-size: 16px;
+.side-bar-dropdown p {
+    margin-left: 5px;
+    display: inline-block;
 }
 
-.subcategory {
-    margin-left: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
+.side-bar-dropdown i.cursor-down {
+    float: right;
+    transform: rotate(-90deg);
+    transition: all .2s ease;
 }
-.subcategory i {
-    margin-right: 10px;
+
+/* 사이드바 드롭다운 메뉴 영역: 소분류 */
+.side-bar-items {
+    margin-left: 10px;
+    display: none;
+    z-index: 1;
+}
+
+.side-bar-items i {
+    margin-right: 5px;
+}
+
+.side-bar-items a {
+    display: block;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #aaa;
+}
+
+.side-bar-items a:hover {
+    cursor: pointer;
+}
+
+/* (임시) 건드릴시 소분류 등장 */
+.side-bar-dropdown:hover .side-bar-items {
+    display: block;
+}
+
+/* (임시) 건드릴시 소분류 등장 */
+.side-bar-dropdown:hover .cursor-down {
+    transform: none;
 }
 
 /* 사이드바 영역 종료 */
@@ -480,6 +500,10 @@ footer {
 .footer-menu h3 {
     font-weight: bold;
     font-size: 20px;
+}
+
+.footer-menu i {
+    margin-right: 10px;
 }
 
 .footer-menu-list {
