@@ -31,35 +31,35 @@ img {
 /* 공용 css 리소스 끝 */
 
 html {
-    width: 100%;
     height: max-content;
 }
 
 body {
-    width: 100%;
     height: max-content;
-    margin-top: 80px;
+    max-width: 1330px;
+    margin: 0 auto;
 }
 
 header {
     position: absolute;
     top: 0px;
-    width: 100%;
+    overflow:hidden;
+    width: 1330px;
     background-color: #fff;
-    box-shadow: -1px 11px 31px 1px rgba(0, 0, 0, 0.192);
 }
 
 .top-nav {
     width: 100%;
     display: flex;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .top-nav-title {
-    margin-left: 50px;
+    margin-left: 20px;
     display:flex;
     align-items: center;
 }
@@ -88,8 +88,45 @@ header {
     display: flex;
 }
 
+.top-nav-menu {
+    margin-left: 20px;
+}
+
+.top-nav-menu li {
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+/* 가상 클래스로 밑줄 그어지는 애니메이션의 시작 위치 지정 */
+.top-nav-menu li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #000;
+    transition: all .5s cubic-bezier(0, 0, 0.15, 1.01);
+}
+
+/* 마우스를 올리면 만들어뒀던 가상 클래스의 박스 길이가 늘어나면서 애니메이션 적용 */
+.top-nav-menu li:hover:after {
+    width: 100%;
+}
+
+.search-bar-area {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+
 .search-bar {
-    margin-right: 50px;
+    margin: 0 auto;
 }
 
 .search-bar input {
@@ -99,6 +136,21 @@ header {
     padding-left: 20px;
     width: 340px;
     height: 50px;
+    font-size: 20px;
+}
+
+.search-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #888;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-icon i {
     font-size: 20px;
 }
 
@@ -140,16 +192,11 @@ header {
     z-index: 5;
 }
 
-main {
-    max-width: 1330px;
-    height: 3000px;
-    margin: 0 auto;
-}
-
 nav {
-    height: 75px;
+    height: 100px;
     width: 100%;
-    background-color: #bbb;
+    margin-bottom: 30px;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,77 +204,265 @@ nav {
     animation-timing-function: ease-in;
 }
 
-.nav-menu li {
-    display: inline-block;
-    margin-left: 10px;
+.nav-more-icon {
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
-.nav-menu li::after {
-    content: "|";
-    margin-left: 10px;
+.nav-menu li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.nav-menu-icon-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 110px;
+    height: 110px;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+
+.nav-menu-icon-box:hover {
+    background-color: #ddd;
+}
+
+.nav-menu-icon-box i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.nav-menu-icon-title {
+    margin-top: 3px;
+    font-weight: bold;
 }
 
 .nav-menu li:last-of-type::after {
     content: none;
 }
 
-#ad-recommand-projects {
-    background-color: #aaa;
-    height: 300px;
-    width: 100%;
+.more-list {
+    display: none;
 }
 
+main {
+    margin-top: 520px;
+}
 
-/* 추천 프로젝트(광고) 하단부분 */
+/* 메인 프로젝트 목록 영역 */
 #section-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
+    margin-top: 50px;
 }
 
-/* 추천 프로젝트(광고) 하단부분 */
-#section-content-warp {
-    width: 80%;
+/* 프로젝트 목록 영역 */
+#section-content-wrap {
+    width: 1000px;
 }
 
 /* 사이드바 영역 */
 aside {
-    width: 30%;
-    border-left: 1px solid #888;
-    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.192);
+    position: sticky;
+    top: 15%;
+    height: fit-content;
+    width: 280px;
+    display: grid;
+    padding-left: 15px;
+}
+
+.container {
+    width: 435px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+.category {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.category i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.category p {
+    font-weight: bold;
+}
+
+.category p > i {
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+.subcategory {
+    margin-left: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.subcategory i {
+    margin-right: 10px;
+}
+
+/* 사이드바 영역 종료 */
+
+/* 섹션 영역 */
+.section-title {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.section-title p {
+    margin-left: 50px;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section-area {
+    margin-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.192);
 }
 
 /* 메인 카테고리 프로젝트 리스트 */
-#main-cate-project-area {
+.main-cate-project {
     display: grid;
-    border-radius: 30px;
-    border:1px solid #eee;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+    padding: 50px;
+}
+
+.project-cate-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-cate {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.project-cate-thumb {
+    margin-bottom: 10px;
+}
+
+.project-cate-thumb img {
+    border-radius: 20px;
+    width: 270px;
+}
+
+.project-cate.name {
+    color: #777;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.project-cate.title {
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 30px;
+    
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.project-cate.rate {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section3 .project-cate.rate {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-cate-rate.percent > b {
+    color: orange;
+    font-weight: bold;
+}
+
+.project-cate-rate.star {
+    color: rgb(226, 58, 7);
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.project-cate.desc {
+    color: #777;
+    font-size: 15px;
+}
+
+.ad-recommand-projects {
+    height: 300px;
+    width: 100%;
+    display: grid;
 }
 
 /* 최근 오픈한 펀딩 프로젝트 리스트 */
-#recent-project-area {
+.recent-project {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 50px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.recent-project-list {
     display: flex;
-    border-radius: 30px;
-    border:1px solid #eee;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+}
+
+.recent-project-thumb {
+    margin-bottom: 10px;
+}
+
+.recent-project-thumb img {
+    border-radius: 20px;
+    width: 200px;
+    height: 150px;
 }
 
 /* 하단 푸터 영역 */
 footer {
     height: 300px;
+    border-top: 2px solid #777;
+    background-color: white;
 }
 
 .footer-top-area {
     width: 100%;
     height: 200px;
-    background-color: #bbb;
     display: flex;
     justify-content: space-between;
 }
@@ -236,14 +471,34 @@ footer {
     align-items: right;
 }
 
-.footer-menu ul {
+.footer-menu {
+    display: flex;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.footer-menu h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer-menu-list {
+    margin-left: 30px;
+}
+
+.footer-menu-list ul {
+    margin-left: 40px;
     display: inline-block;
+}
+
+.footer-menu-list li {
+    margin-bottom: 20px;
+    font-size: 17px;
 }
 
 .footer-bottom-area {
     width: 100%;
     height: 100px;
-    background-color: #ccc;
     display: flex;
     justify-content: space-between;
 }
@@ -251,6 +506,10 @@ footer {
 .footer-copyright {
     width: 70%;
     font-size: 13px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icons {

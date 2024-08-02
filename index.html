@@ -7,8 +7,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <!-- jQuery 스크립트 불러오기 -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <!-- 외부 css 스타일 시트 적용 -->
         <link rel="stylesheet" href="./css/style.css">
+        <!-- 외부 script 파일 적용 -->
+        <script type="text/javascript" src="script/script.js"></script>
         <!-- fontawesome 아이콘 가져오기 -->
         <script src="https://kit.fontawesome.com/d7e414b2e7.js" crossorigin="anonymous"></script>
         <title> FUNFUN - 펀딩을 재밌게! </title>
@@ -29,13 +33,32 @@
                         </p>
                         <p class="site-title">FUNFUN</p>
                      </div>
+                     
+                <!-- 네비게이션 메뉴바 대분류 -->
+                <div class="top-nav-menu wrapper">
+                    <!-- 대분류 항목 리스트 -->
+                    <ul>
+                        <li>메인</li>
+                        <li>인기</li>
+                        <li>최신</li>
+                        <li>FUNFUN+</li>
+                        <li>스토어</li>
+                    </ul>
                 </div>
+
+                </div>
+                
+        <!-- <div class="search-bar-area">
+            <div class="search-bar">
+                <input type="search" name="" id="" placeholder="프로젝트 검색하기">
+            </div> -->
+
                 <!-- 최상단 메뉴 영역 -->
                 <div class="top-menu wrapper">
-                <!-- 검색바 영역 -->
-                <div class="search-bar">
-                    <input type="search" name="" id="" placeholder="프로젝트 검색하기">
-                </div>
+                    <!-- 검색버튼 -->
+                     <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                     </div>
                 <!-- 로그인 버튼 -->
                 <div class="login-button wrapper">
                     <a href="#">
@@ -44,31 +67,68 @@
                 </div>
             </div>
             </div>
-        </header> <!-- 헤더 영역 종료 -->
-        <!-- 메인 화면 영역 -->
-        <main>
+            
             <!-- 금주 인기 프로젝트 영역 -->
             <div id="popular-projects">
                 <img src="https://picsum.photos/1920/1080?random=1">
-                <p class="popular-projects-title"> 금주의 인기 프로젝트 </p>
+                <p class="popular-projects-title"> </p>
             </div>
+
+        </div>
+        </header> <!-- 헤더 영역 종료 -->
+
+        <!-- 메인 화면 영역 -->
+        <main>
+            
+            <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
+            <div id="section-content">
+
+                <div id="section-content-wrap">
+
         <!-- 네비게이션 바 -->
         <nav>
-            <div class="nav-more-icon">
-                <i class="fa-solid fa-bars"></i>
-            </div>
             <!-- 네비게이션 메뉴바 화면 -->
             <div class="nav-bar">
                 <!-- 네비게이션 메뉴바 대분류 -->
                 <div class="nav-menu wrapper">
                     <!-- 대분류 항목 리스트 -->
                     <ul>
-                        <li>반려동물</li>
-                        <li>헬스케어</li>
-                        <li>디지털 미디어</li>
-                        <li>향초</li>
-                        <li>커피</li>
-                        <li>식품</li>
+                        <li>
+                            <div class="nav-menu-icon-box">
+                                <i class="fa-solid fa-mug-hot"></i>
+                                <p class="nav-menu-icon-title">커피</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-menu-icon-box">
+                                <i class="fa-solid fa-fire-flame-simple"></i>
+                                <p class="nav-menu-icon-title">향초</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-menu-icon-box">
+                                <i class="fa-solid fa-drumstick-bite"></i>
+                                <p class="nav-menu-icon-title">식품</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-menu-icon-box">
+                                <i class="fa-solid fa-paw"></i>
+                                <p class="nav-menu-icon-title">반려동물</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-menu-icon-box">
+                                <i class="fa-solid fa-dice"></i>
+                                <p class="nav-menu-icon-title">디지털 콘텐츠</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-menu-icon-box">
+                                <i class="fa-solid fa-heart"></i>
+                                <p class="nav-menu-icon-title">헬스케어</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <!-- 아이콘에 마우스 올릴 시 추가적으로 표시될 소분류 화면 -->
@@ -90,46 +150,191 @@
             </div>
         </nav> <!-- 네비게이션 영역 종료 -->
 
-            <!-- 추천 프로젝트(광고) 영역 -->
-            <section id="ad-recommand-projects">
-                추천 포스트 (광고)
-            </section>
-            
-            <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
-            <div id="section-content">
-
-                <div id="section-content-wrap">
-                
-                    <section id="main-cate-project-area">
-                        <!-- 주제별 프로젝트 목록 영역 / 반복 총 6개 -->
-                        <div class="project-cate">
-                            <!-- 이미지 썸네일 영역 -->
-                            <img class="project-cate-img" src="https://picsum.photos/300/300?random=1">
-                            <!-- 프로젝트 제목 영역 -->
-                            <div class="project-cate-title" >프로젝트 제목</div>
-                            <!-- 프로젝트 요약 설명 영역 -->
-                            <div class="project-cate-desc"> Lorem ipsum dolor sit amet consectetur   adipisicing elit.</div>
+                    <section id="section1" class="section-area">
+                        <div class="section-title">
+                            <p>주제별 프로젝트</p>
+                        </div>
+                        <div class="main-cate-project">
+                            <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 / 반복 총 6개 -->
                         </div>
                     </section> <!-- 주제별 프로젝트 목록 끝 -->
 
-                    <section id="recent-project-area">
-                        <!-- 최근 프로젝트 목록 영역 / 최대 10개 반복, 슬라이딩 -->
-                        <div class="recent-project wrapper">
-                            <!-- 최근 프로젝트 목록 이미지 썸네일 -->
-                            <img class="recent-project-img" src="https://picsum.photos/250/250?random=1">
-                            <!-- 프로젝트 제목 영역 -->
-                            <div class="recent-project-title">프로젝트 1</div>
-                            <!-- 프로젝트 요약 설명 영역 -->
-                            <div class="recent-project-desc">Lorem ipsum dolor sit amet consectetur     adipisicing elit.</div>
+                    <!-- 추천 프로젝트(광고) 영역 -->
+                    <section id="section2"  class="section-area">
+                        <div class="section-title">
+                            <p>추천 프로젝트 (광고)</p>
                         </div>
-                    </section> <!-- 최근 프로젝트 목록  끝 -->
-
+                        <div class="ad-recommand-projects">
+                        </div>
+                    </section>
+                    
+                    <section id="section3" class="section-area">
+                        <div class="section-title">
+                            <p>최근 프로젝트</p>
+                        </div>
+                        <div class="recent-project">
+                            <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
+                        </div> <!-- 최근 프로젝트 목록  끝 -->
+                    </section>
+                    
                 </div>
 
                 <!-- 사이드바 영역 -->
                 <aside>
-                    사이드바
-                    <!-- 여기에 사이드바 입력 -->
+                    <div class="side-bar">
+    <ul class="side-bar-item">
+        <i class="fa-solid fa-star-of-life"></i>
+        <p>반려 동물<i class="fa-solid fa-chevron-down"></i></p>
+    <li>
+        <i class="fa-solid fa-star-of-life"></i>
+        펫 의류
+    </li>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        펫 사료
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        펫 놀이기구
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        펫 관리용품
+    </div>
+
+    <div class="category">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        헬스/케어
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        건강식품
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        헬스 장비
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        보충식품
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        영양제
+    </div>
+    </ul>
+    <div class="category">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        디지털 미디어
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        책
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        음반
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        게임
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        컴퓨터
+    </div>
+
+    <div class="category">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        향초
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        향초
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        캔들워머
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        방향제
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        향수/공병
+    </div>
+
+    <div class="category">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        커피
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        원두 커피
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        콜드브루
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        커피용품
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        과일청
+    </div>
+
+    <div class="category">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        식품
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        냉동식품
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        안주류
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        고기류/육류
+    </div>
+    <div class="subcategory">
+        
+        <i class="fa-solid fa-star-of-life"></i>
+        빵/간식
+    </div>
+</div>
                 </aside> <!-- 사이드바  끝 -->
 
             </div> 
@@ -140,7 +345,8 @@
                 <!-- 추가 메뉴 영역 -->
                 <div class="footer-menu">   
                     <!-- 사이트 안내 메뉴 목록 영역 -->
-                    <h3>Team 1st</h3>
+                    <h3><i class="fa-regular fa-face-smile-wink"></i> Team 1st</h3>
+                    <div class="footer-menu-list">
                     <ul>
                         <li>FUNFUN</li>
                         <li>공지사항</li>
@@ -159,6 +365,7 @@
                         <li>심사 기준</li>
                         <li>이용 정책</li>
                     </ul>
+                </div>
                     <!-- 메뉴가 추가될 경우 이곳에 추가 -->
                 </div>
                 <!-- 고객 지원센터 영역 -->
