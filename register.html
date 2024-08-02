@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st회원가입</title>
+    <script>
+        window.onload = function(){
+            //submit 버튼을 클릭했을 때 
+            //모든 입력값에 대해서 체크해서 입력값이 입력이 되지 않은 경우
+            //"~가 입력되지 않았습니다"를 알림창으로 보여주고 알림창에서 확인하면
+            //포커스가 해당 입력요소로 주어지도록 한다.
+            //특별히, 비밀번호와 전화번호는 아래 조건에 맞게 유효성 검사를 한 번 더 진행한다.
+            //비밀번호 조건: 8글자 이상 16글자 이하로 영문자, 숫자, 특수문자를 1개 이상 포함해야 함
+            //전화번호 조건: 010-숫자 4자리-숫자 4자리로 입력해야 함 
+            //기본적으로 유효성 검사를 통과해야 값이 submit될 수 있도록 해야 합니다.
+            //(예) const regExp_phone = /^010-\d{4}-\d{4}$/;
+            //     전화번호로 입력된 값을 phone이란 변수에 저장하고 있다면
+            //     if(!regExp_phone.test(phone)){ 실행문 }
+
+            //유효성검사 버튼을 가져와서 그 요소노드에 addEventListener() 메소드를 이용해서
+            //이벤트리스너를 등록해줌 - 이벤트: click 이벤트, 이벤트를 처리할 함수: idCheck함수
+            frmJoin.id_btn.addEventListener("click", idCheck);
+
+            //폼 태그 요소의 submit이벤트에 대한 처리
+            frmJoin.addEventListener("submit", function(e){
+                let valid = false;//submit이벤트를 막기 위해 사용
+
+                //아이디 관련 정규표현식
+                const regExp_id = /^(?=.*[0-9])[A-Za-z0-9~!@#$%^()+|=]{8,10}$/;
+                //비밀번호 관련 정규표현식
+                const regExp_pw = /^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[~!@#$%^()+|=])[A-Za-z0-9~!@#$%^()+|=]{8,16}$/;
+                //전화번호 관련 정규표현식
+                const regExp_phone = /^010-\d{4}-\d{4}$/;
+
+                if(frmJoin.id.value.length === 0 || !regExp_id.test(frmJoin.id.value)){
+                    idCheck();
+                }else if(frmJoin.pw.value.length === 0){
+                    alert("비밀번호가 입력되지 않았습니다.");
+                    frmJoin.pw.focus();
+                }else if(!regExp_pw.test(frmJoin.pw.value)){
+                    alert("비밀번호는 8글자 이상 16글자 이하로 영문자, 숫자, 특수문자를 1개 이상 포함해야 합니다.");
+                    frmJoin.pw.focus();
+                }else if(frmJoin.name.value.length === 0){
+                    alert("이름이 입력되지 않았습니다.");
+                    frmJoin.name.focus();
+                }else if(frmJoin.phone.value.length === 0){
+                    alert("전화번호가 입력되지 않았습니다.");
+                    frmJoin.phone.focus();
+                }else if(!regExp_phone.test(frmJoin.phone.value)){
+                    alert("전화번호는 010-숫자4자리-숫자4자리로 입력해야 합니다.");
+                    frmJoin.phone.focus();
+                }else if(frmJoin.email.value.length === 0){
+                    alert("이메일이 입력되지 않았습니다.");
+                    frmJoin.email.focus();
+                }else{
+                    alert("모든 입력값이 정상적으로 입력되었습니다.");
+                    valid = true;
+                }
+                
+                if(!valid){
+                    e.preventDefault();//기본 이벤트 막기
+                    e.stopPropagation();//이벤트 전파 막기
+                }
+                
+            });
+        };
+
+        function idCheck(){
+            // 아이디에 대한 유효성 검사 버튼을 클릭했을 때
+            // 아이디에 대한 정규표현식을 이용해서 아이디를 체크한다.
+            // 아이디 조건: 8글자 이상 10글자 이하로 숫자를 1개 이상 포함해야 함 
+            const regExp_id = /^(?=.*[0-9])[A-Za-z0-9~!@#$%^()+|=]{8,10}$/;
+
+            if(frmJoin.id.value.length === 0){
+                alert("아이디가 입력되지 않았습니다");
+                frmJoin.id.focus();
+            }else if(!regExp_id.test(frmJoin.id.value)){
+                alert("아이디는 8글자 이상 10글자 이하로 숫자 1개 이상 포함해야 합니다.");
+                frmJoin.id.focus();
+            }else{
+                frmJoin.pw.focus();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="frmJoin">
+        <table>
+            <tr>
+                <td>*Email</td>
+            </tr>
+            <tr>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>*이름</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>*비밀번호</td>
+            </tr>
+            <tr>
+                <td><input type="password" name="pw" id="pw"></td>
+            </tr>
+            <tr>
+                <td>*비밀번호 확인</td>
+            </tr>
+            <tr>
+                <td><input type="password" name="pw" id="pw"></td>
+            </tr>
+            <tr>
+                <td>*생년월일</td>
+            </tr>
+            <tr>
+                <td><input type="date" name="birthdate" id="birthdate"></td>
+            </tr>
+            <tr>
+                <td>*휴대전화</td>
+            </tr>
+            <tr>
+                <td><input type="tel" name="phone" id="phone"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="가입하기">
+                </td>
+            </tr>
+        </table>       
+    </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
