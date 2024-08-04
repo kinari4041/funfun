@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./css/style.css">
         <!-- 외부 script 파일 적용 -->
         <script type="text/javascript" src="script/script.js"></script>
+        <script type="text/javascript" src="script/slide.js"></script>
         <!-- fontawesome 아이콘 가져오기 -->
         <script src="https://kit.fontawesome.com/d7e414b2e7.js" crossorigin="anonymous"></script>
         <title> FUNFUN - 펀딩을 재밌게! </title>
@@ -22,58 +23,63 @@
         <header>
             <!-- 최상단 로고/타이틀 및 검색, 로그인 화면 영역 -->
             <div class="top-nav">
-                <!-- 로고, 타이틀 wrapper -->
-                <div class="top-nav-title wrapper">
-                    <!-- 로고 영역 -->
-                    <div class="img-logo"><i class="fa-regular fa-face-smile-wink"></i></div>
-                    <!-- 타이틀 영역 -->
-                     <div class="site-title-wrap">
-                        <p class="sub-title">
-                            펀딩을 재밌게!
-                        </p>
-                        <p class="site-title">FUNFUN</p>
-                     </div>
-                     
-                <!-- 네비게이션 메뉴바 대분류 -->
-                <div class="top-nav-menu wrapper">
-                    <!-- 대분류 항목 리스트 -->
-                    <ul>
-                        <li>메인</li>
-                        <li>인기</li>
-                        <li>최신</li>
-                        <li>FUNFUN+</li>
-                        <li>스토어</li>
-                    </ul>
-                </div>
-
+                <!-- 로고, 타이틀  -->
+                <div class="top-nav-title ">
+                    <a href="#" class="top-nav-title">
+                        <!-- 로고 영역 -->
+                        <div class="img-logo">
+                            <!-- 로고 이미지 -->
+                            <i class="fa-regular fa-face-smile-wink"></i>
+                        </div>
+                        <!-- 타이틀 영역 -->
+                        <div class="site-title-wrap">
+                            <p class="sub-title"> 펀딩을 재밌게! </p>
+                            <p class="site-title"> FUNFUN </p>
+                        </div>
+                    </a>
+                    <!-- 최상단 사이트 메뉴 -->
+                    <div class="top-nav-menu ">
+                        <ul>
+                            <a href="#"><li>메인</li></a>
+                            <a href="#"><li>인기</li></a>
+                            <a href="#"><li>최신</li></a>
+                            <a href="#"><li>FUNFUN+</li></a>
+                            <a href="#"><li>스토어</li></a>
+                        </ul>
+                    </div>
                 </div>
                 
-        <!-- <div class="search-bar-area">
-            <div class="search-bar">
-                <input type="search" name="" id="" placeholder="프로젝트 검색하기">
-            </div> -->
-
                 <!-- 최상단 메뉴 영역 -->
-                <div class="top-menu wrapper">
+                <div class="top-menu ">
                     <!-- 검색버튼 -->
                      <div class="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                      </div>
                 <!-- 로그인 버튼 -->
-                <div class="login-button wrapper">
-                    <a href="#">
-                        <div id="btn-login">로그인</div>
-                    </a>
-                </div>
+                <a class="btn-login" href="#">
+                    로그인/회원가입
+                </a>
+                <!-- 새 프로젝트 버튼 -->
+                <a class="btn-project" href="#">
+                    프로젝트 만들기
+                </a>
             </div>
             </div>
             
             <!-- 금주 인기 프로젝트 영역 -->
-            <div id="popular-projects">
-                <img src="https://picsum.photos/1920/1080?random=1">
-                <p class="popular-projects-title"> </p>
+            <div class="popular-projects">
+                <p class="slide-title">금주의 인기 프로젝트!</p>
+                <div class="slide-item"></div>
+                <div class="slide-item"></div>
+                <div class="slide-item"></div>
+                <div class="slide-item"></div>
+                <div class="slide-item"></div>
+                <div class="slide-ui">
+                    <div class="slide-btn prev"><i class="fa-solid fa-chevron-left"></i></div>
+                    <p class="slide-pagenation"></p>
+                    <div class="slide-btn next"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
             </div>
-
         </div>
         </header> <!-- 헤더 영역 종료 -->
 
@@ -88,7 +94,7 @@
                         <!-- 네비게이션 메뉴바 화면 -->
                         <div class="nav-bar">
                             <!-- 네비게이션 메뉴바 대분류 -->
-                            <div class="nav-menu wrapper">
+                            <div class="nav-menu ">
                                 <!-- 대분류 항목 리스트 -->
                                 <ul>
                                     <li>
@@ -132,14 +138,14 @@
                             <!-- 아이콘에 마우스 올릴 시 추가적으로 표시될 소분류 화면 -->
                             <div class="nav-menu-hover">
                                 <!-- 추가 화면 네비게이션 메뉴바 소분류 -->
-                                <div class="more-list wrapper">
+                                <div class="more-list ">
                                     <!-- 소분류 항목 리스트 -->
                                     <ul>
                                         <li>펫 의류</li>
                                         <li>펫 사료</li>
                                         <li>펫 놀이기구</li>
                                         <li>펫 관리용품</li>
-                                        <li>LOREM</li>
+                                        <li>펫 서브</li>
                                         <li>LOREM</li>
                                     </ul>
                                     <!-- 이후 반복 -->
@@ -322,7 +328,7 @@
                     <!-- 메뉴가 추가될 경우 이곳에 추가 -->
                 </div>
                 <!-- 고객 지원센터 영역 -->
-                 <div class="help-center wrapper">
+                 <div class="help-center ">
                     <!-- 지원센터 타이틀 영역 -->
                     <div class="help-center help-title">
                         <p>고객 지원센터</p>
@@ -344,7 +350,7 @@
                     <p>Team 1st FUNFUN Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto, pariatur suscipit laudantium eaque minus repellat repellendus velit a, officia doloremque fugit quibusdam neque optio! Non a quis perspiciatis dolore.</p>
                 </div>
                 <!-- SNS 아이콘 목록 영역 -->
-                <div class="social-icons wrapper">
+                <div class="social-icons ">
                     <ul class="social-icon-list">
                         <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>

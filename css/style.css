@@ -34,12 +34,14 @@ html {
     height: max-content;
 }
 
+/* 이 사이트는 최대 너비를 1330px로 고정함 */
 body {
     height: max-content;
     max-width: 1330px;
     margin: 0 auto;
 }
 
+/* 헤더 CSS */
 header {
     position: absolute;
     top: 0px;
@@ -48,6 +50,7 @@ header {
     background-color: #fff;
 }
 
+/* 최상단 네비게이션 바 */
 .top-nav {
     width: 100%;
     display: flex;
@@ -56,42 +59,51 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.192);
 }
 
+/* 최상단 네비게이션 바: 로고 및 타이틀 */
 .top-nav-title {
     margin-left: 20px;
     display:flex;
     align-items: center;
 }
 
+/* 최상단 네비게이션 바 로고 이미지 CSS */
 .img-logo {
     font-size: 40px;
     font-weight: bold;
 }
 
+/* 사이트 제목과 부제목을 감싸는 영역 */
 .site-title-wrap {
     margin-left: 15px;
     text-align: center;
 }
 
+/* 사이트 제목 영역 글씨 스타일 */
 .site-title {
     font-size: 35px;
     font-weight: bold;
 }
 
+/* 사이트 부제목 영역 글씨 스타일 */
 .sub-title {
     font-size: 15px;
     font-weight: bold;
 }
 
+/* 최상단 사이트 검색 및 로그인 영역 */
 .top-menu {
     display: flex;
 }
 
+/* 최상단 메뉴바 영역 */
 .top-nav-menu {
     margin-left: 20px;
 }
 
+/* 최상단 메뉴바 영역의 요소들을 정리하는 스타일 */
 .top-nav-menu li {
     display: inline-block;
     position: relative;
@@ -102,7 +114,7 @@ header {
     line-height: 50px;
 }
 
-/* 가상 클래스로 밑줄 그어지는 애니메이션의 시작 위치 지정 */
+/* 메뉴바 영역의 li들에게 가상 클래스로 밑줄 그어지는 애니메이션의 시작 위치 지정 */
 .top-nav-menu li::after {
     content: "";
     position: absolute;
@@ -119,45 +131,42 @@ header {
     width: 100%;
 }
 
-.search-bar-area {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-}
-
-.search-bar {
-    margin: 0 auto;
-}
-
-.search-bar input {
-    background-color: white;
-    border-radius: 50px;
-    border: 1px solid #888;
-    padding-left: 20px;
-    width: 340px;
-    height: 50px;
-    font-size: 20px;
-}
-
+/* 검색 아이콘 영역 */
 .search-icon {
-    width: 50px;
-    height: 50px;
+    padding: 10px;
     border: 1px solid #888;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-}
-
-.search-icon i {
     font-size: 20px;
+    transition: all .3s ease-in;
 }
 
-.login-button {
-    margin-right: 20px;
-    width: 100px;
-    height: 50px;
+/* 검색 아이콘 마우스 올릴 시 배경 바뀌는 효과 적용 */
+.search-icon:hover {
+    background-color: #ddd;
+}
+
+/* 새 프로젝트 만들기 버튼 생성 */
+.btn-project {
+    padding: 10px 15px 10px 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* 로그인 버튼 영역 */
+.btn-login {
+    margin-right: 10px;
+    padding: 10px 15px 10px 15px;
+    width: fit-content;
+    height: fit-content;
     background-color: white;
     border: 1px solid #888;
     border-radius: 50px;
@@ -165,55 +174,129 @@ header {
     justify-content: center;
     align-items: center;
     transition: all .3s ease-in;
-}
-
-.login-button:hover {
-    background-color: #ddd;
-}
-
-#btn-login {
-    font-size: 20px;
     font-weight: bold;
 }
 
-#popular-projects {
+/* 로그인 버튼에 마우스를 올릴 시 배경 변하는 효과 */
+.btn-login:hover {
+    background-color: #ddd;
+}
+
+/* 인기 프로젝트 영역 스타일 */
+.popular-projects {
     width: 100%;
     height: 400px;
     background-color: #ccc;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
-#popular-projects img {
+/* 슬라이드에 들어가는 각 div의 스타일 적용 */
+.slide-item {
+    position: relative;
+    left: 0px;
+    flex-shrink: 0; /* flex item들이 컨테이너 크기에 맞게 줄어들지 않도록 값을 0으로 설정 */
     width: 100%;
     height: 100%;
-    z-index: 4;
+    transition: left 0.8s ease-in-out;
 }
 
-.popular-projects-title {
+/* 무한루프 구현을 위해 복사본 스타일 정의 */
+.slide-item-duplicate {
+    position: relative;
+    z-index: 2;
+    left: 0px;
+    flex-shrink: 0;
+    width: 100%;
+    height: 300px;
+    transition: left 0.8s ease-in-out;
+}
+
+.slide-item:nth-child(1) {
+    background-image: url("https://picsum.photos/1330/400?random=1");
+}
+
+.slide-item:nth-child(2) {
+    background-image: url("https://picsum.photos/1330/400?random=2");
+}
+
+.slide-item:nth-child(3) {
+    background-image: url("https://picsum.photos/1330/400?random=3");
+}
+
+.slide-item:nth-child(4) {
+    background-image: url("https://picsum.photos/1330/400?random=4");
+}
+
+.slide-item:nth-child(5) {
+    background-image: url("https://picsum.photos/1330/400?random=5");
+}
+
+/* 금주의 인기 프로젝트! 영역 스타일 */
+.slide-title {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    background-color: #00000077;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 3;
+}
+
+/* 페이지 넘기는 버튼 및 현재 페이지 표시 ui영역 */
+.slide-ui {
+    position: absolute;
+    display: flex;
     z-index: 5;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px;
 }
 
+/* 페이지 넘기는 버튼 스타일 */
+.slide-btn {
+    font-size: 14px;
+    color:white;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #00000077;
+}
+
+/* 현재 페이지를 알려주는 ui 스타일 */
+.slide-pagenation {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #00000077;
+    color:white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* 대분류 네비게이션 영역 */
 nav {
     height: 100px;
     width: 100%;
     margin-bottom: 30px;
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation-duration: 0.3s;
     animation-timing-function: ease-in;
 }
 
-.nav-more-icon {
-    border-radius: 50px;
-    padding: 20px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.nav-menu li {
-    display: inline-block;
-    margin-left: 40px;
+.nav-menu ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-menu-icon-box {
