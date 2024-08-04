@@ -34,6 +34,7 @@ $(document).ready(function() {
     slideStart.classList.forEach((c) => elmStart.classList.add(c));
     elmStart.innerHTML = slideStart.innerHTML;
 
+    // 복사했던 앨리먼트를 붙여넣기
     slideItems[0].before(elmEnd);
     slideItems[slideItems.length - 1].after(elmStart);
 
@@ -44,6 +45,7 @@ $(document).ready(function() {
         i.setAttribute("style", `left: ${-offset}px`);
     });
 
+    // 다음 슬라이드로 넘기는 메서드
     function nextSlide() {
         nowSlide++;
 
@@ -53,8 +55,6 @@ $(document).ready(function() {
                 i.setAttribute("style", `left: ${-offset}px`);
             });
             pagination.innerHTML = `${nowSlide} / ${maxSlide}`;
-            // paginationItems.forEach((i) => i.classList.remove("active"));
-            // paginationItems[nowSlide - 1].classList.add("active");
         } else {
             nowSlide = 0;
             let offset = slideWidth * nowSlide;
@@ -69,11 +69,10 @@ $(document).ready(function() {
                 });
             }, 0);
             pagination.innerHTML = `${nowSlide} / ${maxSlide}`;
-            // paginationItems.forEach((i) => i.classList.remove("active"));
-            // paginationItems[nowSlide - 1].classList.add("active");
         }
     }
 
+    // 이전 슬라이드로 넘기는 메서드
     function prevSlide() {
         nowSlide--;
 
@@ -83,8 +82,6 @@ $(document).ready(function() {
                 i.setAttribute("style", `left: ${-offset}px`);
             });
             pagination.innerHTML = `${nowSlide} / ${maxSlide}`;
-            // paginationItems.forEach((i) => i.classList.remove("active"));
-            // paginationItems[nowSlide - 1].classList.add("active");
         } else {
             nowSlide = maxSlide + 1;
             let offset = slideWidth * nowSlide;
@@ -99,8 +96,6 @@ $(document).ready(function() {
                 });
             }, 0);
             pagination.innerHTML = `${nowSlide} / ${maxSlide}`;
-            // paginationItems.forEach((i) => i.classList.remove("active"));
-            // paginationItems[nowSlide - 1].classList.add("active");
         }
     }
 
@@ -115,18 +110,6 @@ $(document).ready(function() {
     window.addEventListener("resize", () => {
         slideWidth = slide.clientWidth;
     });
-
-    // for (let i = 0; i < maxSlide; i++) {
-    //     paginationItems[i].addEventListener("click", () => {
-    //         nowSlide = i + 1;
-    //         const offset = slideWidth * nowSlide;
-    //         slideItems.forEach((i) => {
-    //             i.setAttribute("style", `left: ${-offset}px`);
-    //         });
-    //         paginationItems.forEach((i) => i.classList.remove("active"));
-    //         paginationItems[nowSlide - 1].classList.add("active");
-    //     })
-    // }
 
     // 드래그 이벤트를 위한 변수
     let pointStart = 0;

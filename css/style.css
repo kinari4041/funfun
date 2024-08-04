@@ -454,19 +454,30 @@ aside {
 .main-cate-project {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    column-gap: 50px;
-    row-gap: 50px;
-    padding: 50px;
+    padding: 30px;
+    column-gap: 10px;
+    row-gap: 30px;
 }
 
 .project-cate-wrap {
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+
+.project-cate-wrap:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
 }
 
 .project-cate {
     margin-left: 10px;
     margin-bottom: 5px;
+    width: 100%;
 }
 
 .project-cate-thumb {
@@ -490,6 +501,7 @@ aside {
     overflow: hidden;
     word-break: break-word;
     line-height: 30px;
+    padding-right: 8px;
     
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -524,6 +536,7 @@ aside {
 .project-cate.desc {
     color: #777;
     font-size: 15px;
+    display: flex;
 }
 
 .ad-recommand-projects {
@@ -544,6 +557,15 @@ aside {
 .recent-project-list {
     display: flex;
     flex-direction: column;
+    transition: all .2s ease-in-out;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.recent-project-list:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
 }
 
 .recent-project-thumb {
