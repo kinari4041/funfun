@@ -48,7 +48,6 @@ $(document).ready(function() {
     // 다음 슬라이드로 넘기는 메서드
     function nextSlide() {
         nowSlide++;
-
         if (nowSlide <= maxSlide) {
             const offset = slideWidth * nowSlide;
             slideItems.forEach((i) => {

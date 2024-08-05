@@ -1,0 +1,84 @@
+/* ─────────────────────────────────────────────────────────
+                        기본 초기화 소스
+────────────────────────────────────────────────────────── */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-tab-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    font-size: 100%;
+    border: 0;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    height: max-content;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 이 사이트는 최대 너비를 1330px로 고정함 */
+body {
+    background: #fff;
+    height: max-content;
+    max-width: 1330px;
+    margin: 0 auto;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    height:auto;
+    vertical-align: middle;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                        공용 소스
+────────────────────────────────────────────────────────── */
+
+.float-r {
+    float: right;
+    display: inline;
+}
+
+.float-l {
+    float: left;
+    display: inline;
+}
+
+/* ─────────────────────────────────────────────────────────
+                    사이트 컬러 리소스
+────────────────────────────────────────────────────────── */
+
+:root {
+    --funfun-white: #fff;
+   }
