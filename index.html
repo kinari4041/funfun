@@ -32,12 +32,9 @@
                 <div class="top-nav-site-wrap">
                     <a href="#" class="top-nav-title">
                         <!-- 로고 영역 -->
-                        <div class="top-nav-logo">
-                            <!-- 로고 이미지 -->
-                            <i class="fa-regular fa-face-smile-wink font26"></i>
-                        </div>
+                        <div class="top-nav-logo"><i class="fa-regular fa-face-smile-wink font26"></i></div>
                         <!-- 타이틀 영역 -->
-                        <p class="top-nav-title font24">FUNFUN</p>
+                        <p class="font24">FUNFUN</p>
                     </a>
                     
                     <!-- 최상단 사이트 메뉴 -->
@@ -55,29 +52,10 @@
                     
                 <!-- 최상단 메뉴 영역 -->
                 <div class="top-nav-btn-wrap">
-                    <!-- 검색버튼 -->
-                     <div class="top-nav-menu-search">
-                        <div class="search-icon">
-                           <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        </div>
-                        <div class="search-form-wrap">
-                            <form action="search" method="get" class="search-form" action="https://1st.kinari.ink/">
-                                <label>
-                                    <input type="search" class="search-field" placeholder="프로젝트 검색 …" value name="search">
-                                </label>
-                                <input type="submit" class="search-submit" value="검색">
-                            </form>
-                            <div class="search-form-close" data-focus="top-search-icon">
-                                <a href="javascript:void(0)">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <!-- 로그인 버튼 -->
                      <div class="top-nav-menu-login">
-                        <div class="login-button">
-                            <a href="javascript:void(0)">로그인/회원가입</a>
+                        <div class="login-button font16">
+                            <a href="javascript:void(0)">로그인 / 회원가입</a>
                         </div>
                         <div class="login-form-wrap">
                             <form action="#" name="loginField" class="login-form">
@@ -99,54 +77,57 @@
                         </div>
                     </div>
                 <!-- 새 프로젝트 버튼 -->
-                <a class="top-nav-btn-project" href="#">프로젝트 만들기</a>
+                <a class="top-nav-btn-project font16" href="#">프로젝트 만들기</a>
                 </div>
             </div>
         </div>
         <!-- 카테고리 네비게이션 영역 -->
         <div id="cate-nav" class="font16">
-            <div class="cate-title">
-                <ul>
-                    <!-- <li class="cate-title-desc font18">
-                        <p>종류</p>
-                    </li> -->
-                    <li class="cate-title-el" data-text="식품">
-                        <p>분류1</p>
-                    </li>
-                    <li class="cate-title-el" data-text="커피">
-                        <p>분류2</p>
-                    </li>
-                    <li class="cate-title-el" data-text="향초">
-                        <p>분류항3</p>
-                    </li>
-                    <li class="cate-title-el" data-text="반려 동물">
-                        <p>분류4</p>
-                    </li>
-                    <li class="cate-title-el" data-text="헬스 케어">
-                        <p>분류 항목5</p>
-                    </li>
-                    <li class="cate-title-el" data-text="디지털 미디어">
-                        <p>분류6</p>
-                    </li>
-                    <li class="cate-title-el" data-text="식품">
-                        <p>분류7</p>
-                    </li>
-                    <li class="cate-title-el" data-text="커피">
-                        <p>분류항8</p>
-                    </li>
-                    <li class="cate-title-el" data-text="향초">
-                        <p>분류항목9</p>
-                    </li>
-                    <li class="cate-title-el" data-text="반려 동물">
-                        <p>분류10</p>
-                    </li>
-                    <li class="cate-title-el" data-text="헬스 케어">
-                        <p>분류항11</p>
-                    </li>
-                    <li class="cate-title-el" data-text="디지털 미디어">
-                        <p>분류12</p>
-                    </li>
-                </ul>
+            <div class="cate-nav-wrap">
+                <div class="cate-title">
+                    <ul>
+                        <!-- <li class="cate-title-desc font18">
+                            <p>종류</p>
+                        </li> -->
+                        <li class="cate-title-el" data-text="식품">
+                            <p>분류1</p>
+                        </li>
+                        <li class="cate-title-el" data-text="커피">
+                            <p>분류2</p>
+                        </li>
+                        <li class="cate-title-el" data-text="향초">
+                            <p>분류항3</p>
+                        </li>
+                        <li class="cate-title-el" data-text="반려 동물">
+                            <p>분류4</p>
+                        </li>
+                        <li class="cate-title-el" data-text="헬스 케어">
+                            <p>분류 항목5</p>
+                        </li>
+                        <li class="cate-title-el" data-text="디지털 미디어">
+                            <p>분류6</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 검색버튼 -->
+                 <div class="top-nav-menu-search font16">
+                    <div class="search-icon">
+                       <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i><span></span>프로젝트 검색</a>
+                    </div>
+                    <div class="search-form-wrap">
+                        <form action="search" method="get" class="search-form" action="https://1st.kinari.ink/">
+                            <label>
+                                <input type="search" class="search-field" placeholder="프로젝트 검색 …" value name="search">
+                            </label>
+                            <input type="submit" class="search-submit" value="검색">
+                        </form>
+                        <div class="search-form-close" data-focus="top-search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </header> <!-- 헤더 영역 종료 -->
@@ -172,106 +153,80 @@
                             </div>
                         </div>
                     </section>
-                    <!-- 메인영역 네비게이션 메뉴바 화면 -->
-                    <div id="main-nav">
-                        <!-- 네비게이션 메뉴바 대분류 -->
-                        <div class="nav-menu">
-                            <!-- 대분류 항목 리스트 -->
-                            <ul>
-                                <li>
-                                    <div class="nav-menu-icon-box">
-                                        <i class="fa-solid fa-mug-hot font26"></i>
-                                        <p class="nav-menu-icon-title">커피</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="nav-menu-icon-box">
-                                        <i class="fa-solid fa-fire-flame-simple font26"></i>
-                                        <p class="nav-menu-icon-title">향초</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="nav-menu-icon-box">
-                                        <i class="fa-solid fa-drumstick-bite font26"></i>
-                                        <p class="nav-menu-icon-title">식품</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="nav-menu-icon-box">
-                                        <i class="fa-solid fa-paw font26"></i>
-                                        <p class="nav-menu-icon-title">반려동물</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="nav-menu-icon-box">
-                                        <i class="fa-solid fa-dice font26"></i>
-                                        <p class="nav-menu-icon-title">디지털 콘텐츠</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="nav-menu-icon-box">
-                                        <i class="fa-solid fa-heart font26"></i>
-                                        <p class="nav-menu-icon-title">헬스케어</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- 네비게이션 영역 종료 -->
-                    <hr>
                     <section id="section1" class="section-area">
                         <div class="section-wrap">
-                            <div class="section-title font24">
-                                <p>주목할 만한 프로젝트!</p>
+                            <div class="section-title">
+                                <p class="font24">주제별 추천 프로젝트!</p>
+                                <span class="font16">FunFun에서 선정한 주제별 추천 프로젝트</span>
                             </div>
                             <div class="main-cate-project">
                                 <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 / 반복 총 6개 -->
                             </div>
                         </div>
+                        <aside>
+                            테스트
+                        </aside>
                     </section> <!-- 주제별 프로젝트 목록 끝 -->
                     <hr>
                     <!-- 추천 프로젝트(광고) 영역 -->
                     <section id="section2"  class="section-area">
-                        <div class="section-title font24">
-                            <p>FUNFUN's 추천 프로젝트</p>
+                        <div class="section-title">
+                            <p class="font24">FunFun's 추천 프로젝트</p>
+                            <span class="font16">당신에게 맞춤추천</span>
                         </div>
                         <div class="ad-recommand-projects">
-                            
-                            <div class="moving-list-ui">
-                                <div class="list-btn prev"><i class="fa-solid fa-chevron-left"></i></div>
-                                <div class="list-btn next"><i class="fa-solid fa-chevron-right"></i></div>
-                            </div>
+                            <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
+                            <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
+                        </div>
+                        <div class="banner">
+                            <img src="https://picsum.photos/1330/200?random=${data.num}">
                         </div>
                     </section>
                     <hr>
+                    <!-- 요즘뜨는 프로젝트 영역 -->
                     <section id="section3" class="section-area">
-                        <div class="section-title font24">
-                            <p>요즘 뜨고있는 프로젝트!</p>
+                        <div class="section-title">
+                            <p class="font24">요즘 뜨고 있는 프로젝트</p>
+                            <span class="font16">지금 핫한 프로젝트들만 모아봤어요</span>
                         </div>
                         <div class="trend-project">
                             <p class="trend-project-title font20">
                             오늘 가장 많은 <span class="hashtag">#좋아요</span>를 받은 프로젝트
                             </p>
-                            <div class="trend-project-block">
-                                <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                            </div> <!-- 최근 프로젝트 목록  끝 -->
+                            <div class="trend-project-wrap">
+                                <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
+                                <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
+                                <div class="trend-project-block">
+                                    <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
+                                </div> <!-- 최근 프로젝트 목록  끝 -->
+                            </div>
                             <p class="trend-project-title font20">
                             실시간 <span class="hashtag">#급상승</span> 프로젝트!
                             </p>
-                            <div class="trend-project-block">
-                                <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                            </div> <!-- 최근 프로젝트 목록  끝 -->
+                            <div class="trend-project-wrap">
+                                <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
+                                <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
+                                <div class="trend-project-block">
+                                    <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
+                                </div> <!-- 최근 프로젝트 목록  끝 -->
+                            </div>
                             <p class="trend-project-title font20">
                             이번주 가장 많은 <span class="hashtag">#FUN</span>을 받은 프로젝트!
                             </p>
-                            <div class="trend-project-block">
-                                <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                            </div> <!-- 최근 프로젝트 목록  끝 -->
+                            <div class="trend-project-wrap">
+                                <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
+                                <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
+                                <div class="trend-project-block">
+                                    <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
+                                </div> <!-- 최근 프로젝트 목록  끝 -->
+                            </div>
                         </div>
                     </section>
                     <hr>
                     <section id="section4" class="section-area">
-                        <div class="section-title font24">
-                            <p>시선집중! 오픈 예정 프로젝트</p>
+                        <div class="section-title">
+                            <p class="font24">모두 주목! 오픈 예정 프로젝트</p>
+                            <span class="font16">얼리버드 혜택 받아가세요</span>
                         </div>
                         <div class="recent-project">
                             <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
@@ -279,8 +234,9 @@
                     </section>
                     <hr>
                     <section id="section5" class="section-area">
-                        <div class="section-title font24">
-                            <p>최근 오픈한 프로젝트</p>
+                        <div class="section-title">
+                            <p class="font24">최근 오픈한 프로젝트</p>
+                            <span class="font16">따끈따끈! 방금 오픈한 프로젝트들</span>
                         </div>
                         <div class="recent-project">
                             <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->

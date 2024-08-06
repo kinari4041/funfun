@@ -6,7 +6,7 @@
 header {
     background-color: #fff;
     margin: 0 auto;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
 }
 
 
@@ -16,7 +16,7 @@ header {
 
 #top-nav {
     display: flex;
-    height: 70px;
+    height: 80px;
     width: 1330px;
     margin: 0 auto;
     align-items: center;
@@ -46,19 +46,15 @@ header {
 }
 
 .top-nav-title {
-    margin-left: 20px;
+    font-family: "Noto Sans KR", sans-serif;
     display:flex;
     align-items: center;
+    gap: 10px;
+    font-weight: bold;
 }
 
 .top-nav-logo {
     font-weight: black;
-}
-
-.top-nav-title {
-    margin-left: 15px;
-    text-align: center;
-    font-weight: bold;
 }
 
 .top-nav-site-menu {
@@ -188,18 +184,25 @@ header {
 }
 
 .search-icon {
-    padding: 12px;
-    border: 1px solid #888;
-    border-radius: 50px;
+    font-family: "Noto Sans KR", sans-serif;
     display: flex;
+    font-weight: 300;
+    height: 100%;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    transition: all .3s ease-in;
+    border-bottom: 0px solid #376fc2;
+    transition: all .1s ease;
 }
 
 .search-icon:hover {
-    background-color: #ddd;
+    cursor:pointer;
+    color: #376fc2;
+    border-bottom: 5px solid #376fc2;
+}
+
+.search-icon span {
+    margin-left: 10px;
 }
 
 
@@ -208,21 +211,19 @@ header {
 ────────────────────────────────────────────────────────── */
 
 .login-button {
+    font-family: "Noto Sans KR", sans-serif;
     margin-right: 10px;
     padding: 8px 10px 8px 10px;
     width: fit-content;
     height: fit-content;
     background-color: white;
     border: 1px solid #888;
-    border-radius: 50px;
+    border-radius: 10px;
     display: flex;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     transition: all .3s ease-in;
-}
-
-.login-button a {
-    font-weight: bold;
 }
 
 .login-button:hover {
@@ -354,6 +355,7 @@ header {
 ────────────────────────────────────────────────────────── */
 
 .top-nav-btn-project {
+    font-family: "Noto Sans KR", sans-serif;
     padding: 10px 15px 10px 15px;
     width: fit-content;
     height: fit-content;
@@ -361,7 +363,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
 }
 
 
@@ -373,7 +374,7 @@ header {
     position: relative;
     display: flex;
     margin: 0 auto;
-    height: 70px;
+    height: 60px;
     background: #fff;
     align-items: center;
     justify-content: left;
@@ -386,7 +387,7 @@ header {
     position: fixed;
     top: 0;
     animation: fadein 0.2s ease-in-out;
-    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid #eee;
 }
 
 @keyframes fadein {
@@ -397,10 +398,13 @@ header {
     }
 }
 
-.cate-title {
+.cate-nav-wrap {
     height: 100%;
     width: 1330px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cate-title ul {
@@ -428,6 +432,7 @@ header {
     align-items: center;
     border-bottom: 0px solid #376fc2;
     transition: all .1s ease;
+    height: 100%;
 }
 
 .cate-title-el:hover {
@@ -437,11 +442,10 @@ header {
 }
 
 .cate-item {
-    top: 70;
-    background: #fff;
+    top: 60;
+    background: #eee;
     position: absolute;
     padding: 30px;
-    padding-top: 10px;
     z-index: 5;
     width: 100%;
 }
@@ -454,14 +458,16 @@ header {
 .cate-items {
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    column-gap: 40px;
-    row-gap: 40px;
+    grid-template-columns: repeat(6,150px);
+    row-gap: 25px;
 }
 
 .cate-items a {
-    background-color: #eee;
-    height: fit-content;
+    font-weight: 300;
+}
+
+.cate-items a:hover {
+    font-weight: bold;
 }
 
 
@@ -470,9 +476,8 @@ header {
 ────────────────────────────────────────────────────────── */
 
 main {
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 1330px;
+    margin-top: 40px;
+    width: 100%;
 }
 
 /* 메인 프로젝트 목록 영역 */
@@ -481,7 +486,6 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    margin-top: 50px;
 }
 
 /* 프로젝트 목록 영역 */
@@ -496,6 +500,8 @@ main {
 
 section {
     position: relative;
+    margin: 0 auto;
+    width: 1330px;
 }
 
 .section-wrap {
@@ -506,25 +512,45 @@ section {
 .section-title {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    margin-top: 30px;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 .section-title p {
-    margin-left: 50px;
-    padding-top: 30px;
+    margin-left: 30px;
     font-weight: bold;
 }
 
+.section-title span {
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
 .section-area {
-    margin-bottom: 20px;
     border-radius: 30px;
 }
 
-#section1,
-#section2,
-#section3,
-#section4,
-#section5 {
-    margin: 40px 0px;
+#popular {
+    margin-bottom: 0;
+}
+
+#section1 {
+    display: grid;
+    grid-template-columns: 1000px auto;
+}
+
+#section1 .section-wrap {
+    margin-top: 30px;
+}
+
+#section1 .section-title {
+    margin-top: 0;
+}
+
+aside {
+    width: 250px;
+    height: 100%;
+    border-left: 1px solid #eee;
 }
 
 
@@ -542,7 +568,6 @@ section {
     position: relative;
     overflow: hidden;
     user-select: none;
-    border-radius: 30px;
 }
 
 /* 금주의 인기 프로젝트! 영역 스타일 */
@@ -551,11 +576,12 @@ section {
     top: 20px;
     left: 30px;
     padding: 10px 15px 10px 15px;
-    border-radius: 20px;
-    background-color: #00000077;
-    color:white;
+    border-radius: 10px;
+    background-color: #fff;
+    color:#000;
     font-weight: bold;
     z-index: 3;
+    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* 슬라이드에 들어가는 각 div의 스타일 적용 */
@@ -603,98 +629,43 @@ section {
 .slide-ui {
     position: absolute;
     display: flex;
+    align-items: center;
     z-index: 5;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    gap: 20px;
+    gap: 25px;
 }
 
 /* 페이지 넘기는 버튼 스타일 */
 .slide-btn {
-    color:white;
+    color:#000;
     cursor: pointer;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: #00000077;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* 현재 페이지를 알려주는 ui 스타일 */
 .slide-pagenation {
     padding: 10px;
-    border-radius: 20px;
-    background-color: #00000077;
-    color:white;
-    font-weight: bold;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-                메인영역 메뉴 네비게이션 바
-────────────────────────────────────────────────────────── */
-
-#main-nav {
-    height: 100px;
-    width: 100%;
-    margin-bottom: 30px;
+    border-radius: 10px;
     background-color: #fff;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in;
-}
-
-.nav-menu ul {
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-menu-icon-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 110px;
-    height: 110px;
-    gap: 10px;
-    border-radius: 20px;
-    transition: all .2s ease;
-}
-
-.nav-menu-icon-box:hover {
-    background-color: #ddd;
-}
-
-.nav-menu-icon-box i {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color:#000;
     font-weight: bold;
-}
-
-.nav-menu-icon-title {
-    margin-top: 3px;
-    font-weight: bold;
-}
-
-.nav-menu li:last-of-type::after {
-    content: none;
-}
-
-.more-list {
-    display: none;
+    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 
 /* ─────────────────────────────────────────────────────────
-                섹션1: 주목할 만한 프로젝트!
+                섹션1: 주제별 추천 프로젝트
 ────────────────────────────────────────────────────────── */
 
 .main-cate-project {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    padding: 30px;
+    padding: 30px 40px 30px 20px;
     column-gap: 60px;
     row-gap: 30px;
 }
@@ -702,14 +673,18 @@ section {
 .project-cate-wrap {
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 10px;
     align-items: center;
+}
+
+.project-cate-thumb-wrap {
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
     transition: all .2s ease-in-out;
 }
 
-.project-cate-wrap:hover {
+.project-cate-thumb-wrap:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
 }
@@ -728,7 +703,7 @@ section {
 
 .project-cate-thumb img {
     border-radius: 20px;
-    height: 270px;
+    height: 230px;
     width: 100%;
     object-fit: cover;
 }
@@ -778,52 +753,71 @@ section {
     display: flex;
 }
 
+.project-subject {
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #ddd;
+}
+
+.project-subject-title {
+    margin-left: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.project-subject-more {
+    margin-right: 10px;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+
+.project-subject-more:hover {
+    color: #ec80d8
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                섹션2: 광고, 추천 프로젝트
+────────────────────────────────────────────────────────── */
+
 .ad-recommand-projects {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 60px;
     height: 300px;
     width: 100%;
     display: grid;
+    border-radius: 30px;
 }
 
-/* 최근 오픈한 펀딩 프로젝트 리스트 */
-
-.recent-project {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    padding: 50px;
-    column-gap: 30px;
-    row-gap: 30px;
+.banner {
+    height: 200px;
+    width: 1330px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    overflow: hidden;
 }
 
-.recent-project-list {
-    display: flex;
-    flex-direction: column;
-    transition: all .2s ease-in-out;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.recent-project-list:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
-}
-
-.recent-project-thumb {
-    margin-bottom: 10px;
-}
-
-.recent-project-thumb img {
-    border-radius: 20px;
-    width: 200px;
-    height: 150px;
-}
-
-/* 요즘 트렌드 프로젝트 리스트 */
+/* ─────────────────────────────────────────────────────────
+                섹션3: 최근 오픈한 프로젝트
+────────────────────────────────────────────────────────── */
 
 .trend-project {
-    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     column-gap: 30px;
     row-gap: 30px;
+}
+
+.trend-project-wrap {
+    position: relative;
 }
 
 .trend-project-block {
@@ -836,16 +830,7 @@ section {
 }
 
 .trend-project-block::-webkit-scrollbar {
-    height: 5px;
-}
-
-.trend-project-block::-webkit-scrollbar-thumb {
-    background-color: #ccc
-}
-
-.trend-project-block::-webkit-scrollbar-track,
-.trend-project-block::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    display:none;
 }
 
 .trend-project-block:last-child {
@@ -874,14 +859,90 @@ section {
     width: 200px;
     height: 150px;
 }
+
 .trend-project-title {
+    margin-top: 30px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.hashtag {
-    color: rgb(83, 83, 255);
-    font-weight: bold;
+.trend-project-title:first-child {
+    margin-top: 0;
+}
+
+.trend-project-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #000;
+    background-color: #fff;
+    width: 40px;
+    height: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 3px 5px 2px 0px rgba(83, 83, 83, 0.4);
+}
+
+.trend-project-btn.right{
+    right: 20px;
+}
+
+.trend-project-btn.left{
+    left: 20px;
+}
+
+.trend-project-btn i {
+    margin-top: 1px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                섹션4: 최근 오픈 예정 프로젝트
+────────────────────────────────────────────────────────── */
+
+
+
+/* ─────────────────────────────────────────────────────────
+                섹션5: 최근 오픈한 프로젝트
+────────────────────────────────────────────────────────── */
+
+.recent-project {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 50px;
+    padding-bottomccccccccccccccccccccccccccccccccccccccccccccccc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  : 50px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.recent-project-list {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.recent-project-list:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.recent-project-thumb {
+    margin-bottom: 10px;
+}
+
+.recent-project-thumb img {
+    border-radius: 20px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
 

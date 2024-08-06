@@ -130,3 +130,8 @@ strong {
 :root {
     --funfun-white: #fff;
    }
+
+.hashtag {
+    color: rgb(83, 83, 255);
+    font-weight: bold;
+}
