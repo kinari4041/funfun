@@ -7,10 +7,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <!-- noto sans 구글 폰트 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <!-- jQuery 스크립트 불러오기 -->
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <!-- 외부 css 스타일 시트 적용 -->
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./css/default.css">
         <!-- 외부 script 파일 적용 -->
         <script type="text/javascript" src="script/script.js"></script>
         <script type="text/javascript" src="script/slide.js"></script>
@@ -29,14 +34,14 @@
                         <!-- 로고 영역 -->
                         <div class="top-nav-logo">
                             <!-- 로고 이미지 -->
-                            <i class="fa-regular fa-face-smile-wink"></i>
+                            <i class="fa-regular fa-face-smile-wink font26"></i>
                         </div>
                         <!-- 타이틀 영역 -->
-                        <p class="top-nav-title"> FUNFUN </p>
+                        <p class="top-nav-title font24">FUNFUN</p>
                     </a>
                     
                     <!-- 최상단 사이트 메뉴 -->
-                    <div class="top-nav-site-menu">
+                    <div class="top-nav-site-menu font18">
                         <ul>
                             <a href="#"><li>메인</li></a>
                             <a href="#"><li>인기</li></a>
@@ -69,98 +74,164 @@
                             </div>
                         </div>
                     </div>
-                <!-- 로그인 버튼 -->
-                <a class="top-nav-btn-login" href="#">로그인/회원가입</a>
+                    <!-- 로그인 버튼 -->
+                     <div class="top-nav-menu-login">
+                        <div class="login-button">
+                            <a href="javascript:void(0)">로그인/회원가입</a>
+                        </div>
+                        <div class="login-form-wrap">
+                            <form action="#" name="loginField" class="login-form">
+                                <fieldset>
+                                    <legend>로그인</legend>
+                                    <br><button type="button" class="google"><i class="fa-brands fa-google"></i>Log in with Google</button>
+                                    <p class="or">or</p>
+                                    <input type="text" name="id" id="id" placeholder="Username"><br>
+                                    <input type="password" name="pw" id="pw" placeholder="Password"><br>
+                                    <button class="login" onclick="checkLogin()">LOGIN</button>
+                                    <p class="forgot">Forgot your password?</p>
+                                </fieldset>
+                            </form>
+                            <div class="login-form-close" data-focus="top-login-icon">
+                                <a href="javascript:void(0)">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 <!-- 새 프로젝트 버튼 -->
                 <a class="top-nav-btn-project" href="#">프로젝트 만들기</a>
-            </div>
-            </div>
-            
-            <!-- 금주 인기 프로젝트 영역 -->
-            <div class="popular-projects">
-                <p class="slide-title">금주의 인기 프로젝트!</p>
-                <div class="slide-item item1"></div>
-                <div class="slide-item item2"></div>
-                <div class="slide-item item3"></div>
-                <div class="slide-item item4"></div>
-                <div class="slide-item item5"></div>
-                <div class="slide-ui">
-                    <div class="slide-btn prev"><i class="fa-solid fa-chevron-left"></i></div>
-                    <p class="slide-pagenation"></p>
-                    <div class="slide-btn next"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
+            </div>
+        </div>
+        <!-- 카테고리 네비게이션 영역 -->
+        <div id="cate-nav" class="font16">
+            <div class="cate-title">
+                <ul>
+                    <!-- <li class="cate-title-desc font18">
+                        <p>종류</p>
+                    </li> -->
+                    <li class="cate-title-el" data-text="식품">
+                        <p>분류1</p>
+                    </li>
+                    <li class="cate-title-el" data-text="커피">
+                        <p>분류2</p>
+                    </li>
+                    <li class="cate-title-el" data-text="향초">
+                        <p>분류항3</p>
+                    </li>
+                    <li class="cate-title-el" data-text="반려 동물">
+                        <p>분류4</p>
+                    </li>
+                    <li class="cate-title-el" data-text="헬스 케어">
+                        <p>분류 항목5</p>
+                    </li>
+                    <li class="cate-title-el" data-text="디지털 미디어">
+                        <p>분류6</p>
+                    </li>
+                    <li class="cate-title-el" data-text="식품">
+                        <p>분류7</p>
+                    </li>
+                    <li class="cate-title-el" data-text="커피">
+                        <p>분류항8</p>
+                    </li>
+                    <li class="cate-title-el" data-text="향초">
+                        <p>분류항목9</p>
+                    </li>
+                    <li class="cate-title-el" data-text="반려 동물">
+                        <p>분류10</p>
+                    </li>
+                    <li class="cate-title-el" data-text="헬스 케어">
+                        <p>분류항11</p>
+                    </li>
+                    <li class="cate-title-el" data-text="디지털 미디어">
+                        <p>분류12</p>
+                    </li>
+                </ul>
             </div>
         </div>
         </header> <!-- 헤더 영역 종료 -->
 
         <!-- 메인 화면 영역 -->
         <main>
-            
             <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
             <div id="section-content">
                 <div id="section-content-wrap">
-                    <!-- 네비게이션 바 -->
-                    <nav>
-                        <!-- 네비게이션 메뉴바 화면 -->
-                        <div class="nav-bar">
-                            <!-- 네비게이션 메뉴바 대분류 -->
-                            <div class="nav-menu ">
-                                <!-- 대분류 항목 리스트 -->
-                                <ul>
-                                    <li>
-                                        <div class="nav-menu-icon-box">
-                                            <i class="fa-solid fa-mug-hot"></i>
-                                            <p class="nav-menu-icon-title">커피</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="nav-menu-icon-box">
-                                            <i class="fa-solid fa-fire-flame-simple"></i>
-                                            <p class="nav-menu-icon-title">향초</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="nav-menu-icon-box">
-                                            <i class="fa-solid fa-drumstick-bite"></i>
-                                            <p class="nav-menu-icon-title">식품</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="nav-menu-icon-box">
-                                            <i class="fa-solid fa-paw"></i>
-                                            <p class="nav-menu-icon-title">반려동물</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="nav-menu-icon-box">
-                                            <i class="fa-solid fa-dice"></i>
-                                            <p class="nav-menu-icon-title">디지털 콘텐츠</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="nav-menu-icon-box">
-                                            <i class="fa-solid fa-heart"></i>
-                                            <p class="nav-menu-icon-title">헬스케어</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <section id="popular" class="section-area">
+                        <!-- 금주 인기 프로젝트 영역 -->
+                        <div class="popular-projects">
+                            <p class="slide-title">금주의 인기 프로젝트!</p>
+                            <div class="slide-item item1"></div>
+                            <div class="slide-item item2"></div>
+                            <div class="slide-item item3"></div>
+                            <div class="slide-item item4"></div>
+                            <div class="slide-item item5"></div>
+                            <div class="slide-ui">
+                                <div class="slide-btn prev"><i class="fa-solid fa-chevron-left"></i></div>
+                                <p class="slide-pagenation"></p>
+                                <div class="slide-btn next"><i class="fa-solid fa-chevron-right"></i></div>
                             </div>
                         </div>
-                    </nav> <!-- 네비게이션 영역 종료 -->
-
+                    </section>
+                    <!-- 메인영역 네비게이션 메뉴바 화면 -->
+                    <div id="main-nav">
+                        <!-- 네비게이션 메뉴바 대분류 -->
+                        <div class="nav-menu">
+                            <!-- 대분류 항목 리스트 -->
+                            <ul>
+                                <li>
+                                    <div class="nav-menu-icon-box">
+                                        <i class="fa-solid fa-mug-hot font26"></i>
+                                        <p class="nav-menu-icon-title">커피</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav-menu-icon-box">
+                                        <i class="fa-solid fa-fire-flame-simple font26"></i>
+                                        <p class="nav-menu-icon-title">향초</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav-menu-icon-box">
+                                        <i class="fa-solid fa-drumstick-bite font26"></i>
+                                        <p class="nav-menu-icon-title">식품</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav-menu-icon-box">
+                                        <i class="fa-solid fa-paw font26"></i>
+                                        <p class="nav-menu-icon-title">반려동물</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav-menu-icon-box">
+                                        <i class="fa-solid fa-dice font26"></i>
+                                        <p class="nav-menu-icon-title">디지털 콘텐츠</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav-menu-icon-box">
+                                        <i class="fa-solid fa-heart font26"></i>
+                                        <p class="nav-menu-icon-title">헬스케어</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- 네비게이션 영역 종료 -->
+                    <hr>
                     <section id="section1" class="section-area">
-                        <div class="section-title">
-                            <p>주목할 만한 프로젝트!</p>
+                        <div class="section-wrap">
+                            <div class="section-title font24">
+                                <p>주목할 만한 프로젝트!</p>
+                            </div>
+                            <div class="main-cate-project">
+                                <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 / 반복 총 6개 -->
+                            </div>
                         </div>
-                        <div class="main-cate-project">
-                            <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 / 반복 총 6개 -->
-                        </div>
-                        <script type="module" src=""></script>
                     </section> <!-- 주제별 프로젝트 목록 끝 -->
-
+                    <hr>
                     <!-- 추천 프로젝트(광고) 영역 -->
                     <section id="section2"  class="section-area">
-                        <div class="section-title">
+                        <div class="section-title font24">
                             <p>FUNFUN's 추천 프로젝트</p>
                         </div>
                         <div class="ad-recommand-projects">
@@ -171,25 +242,25 @@
                             </div>
                         </div>
                     </section>
-
+                    <hr>
                     <section id="section3" class="section-area">
-                        <div class="section-title">
-                            <p>요즘 트렌드는?</p>
+                        <div class="section-title font24">
+                            <p>요즘 뜨고있는 프로젝트!</p>
                         </div>
                         <div class="trend-project">
-                            <p class="trend-project-title">
+                            <p class="trend-project-title font20">
                             오늘 가장 많은 <span class="hashtag">#좋아요</span>를 받은 프로젝트
                             </p>
                             <div class="trend-project-block">
                                 <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
                             </div> <!-- 최근 프로젝트 목록  끝 -->
-                            <p class="trend-project-title">
+                            <p class="trend-project-title font20">
                             실시간 <span class="hashtag">#급상승</span> 프로젝트!
                             </p>
                             <div class="trend-project-block">
                                 <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
                             </div> <!-- 최근 프로젝트 목록  끝 -->
-                            <p class="trend-project-title">
+                            <p class="trend-project-title font20">
                             이번주 가장 많은 <span class="hashtag">#FUN</span>을 받은 프로젝트!
                             </p>
                             <div class="trend-project-block">
@@ -197,140 +268,25 @@
                             </div> <!-- 최근 프로젝트 목록  끝 -->
                         </div>
                     </section>
-
+                    <hr>
                     <section id="section4" class="section-area">
-                        <div class="section-title">
+                        <div class="section-title font24">
                             <p>시선집중! 오픈 예정 프로젝트</p>
                         </div>
                         <div class="recent-project">
                             <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
                         </div> <!-- 최근 프로젝트 목록  끝 -->
                     </section>
-                    
+                    <hr>
                     <section id="section5" class="section-area">
-                        <div class="section-title">
-                            <p>모두 주목! 최근 프로젝트</p>
+                        <div class="section-title font24">
+                            <p>최근 오픈한 프로젝트</p>
                         </div>
                         <div class="recent-project">
                             <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
                         </div> <!-- 최근 프로젝트 목록  끝 -->
                     </section>
-                    
                 </div>
-
-                <!-- 사이드바 영역 -->
-                <aside>
-                    <div class="sticky-sidebar">
-                        <div class="side-bar-dropdown">
-                            <span class="side-bar-title">
-                                <i class="fa-solid fa-star-of-life"></i>
-                                <p>반려 동물</p>
-                                <i class="fa-solid fa-chevron-down cursor-down"></i>
-                            </span>
-                            <div class="side-bar-items">
-                                <a href="#"><i class="fa-solid fa-star-of-life"></i>
-                                    펫 의류</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                    펫 사료</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                    펫 놀이기구</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                    펫 관리용품</a>
-                            </div>
-                        </div>
-
-                        <div class="side-bar-dropdown">
-                            <span class="side-bar-title">
-                                <i class="fa-solid fa-star-of-life"></i>
-                                <p>헬스 케어</p>
-                                <i class="fa-solid fa-chevron-down cursor-down"></i>
-                            </span>
-                            <div class="side-bar-items">
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                건강식품</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                헬스 장비</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                보충식품</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                영양제</a>
-                            </div>
-                        </div>
-
-                        <div class="side-bar-dropdown">
-                            <span class="side-bar-title">
-                                <i class="fa-solid fa-star-of-life"></i>
-                                <p>디지털 미디어</p>
-                                <i class="fa-solid fa-chevron-down cursor-down"></i>
-                                </span>
-                            <div class="side-bar-items">
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                책</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                음반</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                게임</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                컴퓨터</a>
-                            </div>
-                        </div>
-
-                        <div class="side-bar-dropdown">
-                            <span class="side-bar-title">
-                                <i class="fa-solid fa-star-of-life"></i>
-                                <p>향초</p>
-                                <i class="fa-solid fa-chevron-down cursor-down"></i>
-                            </span>
-                            <div class="side-bar-items">
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                향초</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                캔들워머</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                방향제</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                향수/공병</a>
-                            </div>
-                        </div>
-
-                        <div class="side-bar-dropdown">
-                            <span class="side-bar-title">
-                                <i class="fa-solid fa-star-of-life"></i>
-                                <p>커피</p>
-                                <i class="fa-solid fa-chevron-down cursor-down"></i>
-                            </span>
-                            <div class="side-bar-items">
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                원두 커피</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                콜드브루</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                커피용품</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                과일청</a>
-                            </div>
-                        </div>
-
-                        <div class="side-bar-dropdown">
-                            <span class="side-bar-title">
-                                <i class="fa-solid fa-star-of-life"></i>
-                                <p>식품</p>
-                                <i class="fa-solid fa-chevron-down cursor-down"></i>
-                            </span>
-                            <div class="side-bar-items">
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                냉동식품</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                안주류</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                고기류/육류</a>
-                                <a herf="#"><i class="fa-solid fa-star-of-life"></i>
-                                빵/간식</a>
-                            </div>
-                        </div>
-                    </div>
-                </aside> <!-- 사이드바  끝 -->
-
             </div> 
         </main>
         <footer>

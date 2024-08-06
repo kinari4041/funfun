@@ -122,8 +122,10 @@ $(document).ready(function() {
         pointEnd = e.pageX;
         if (pointStart < pointEnd) {
             prevSlide();
+            clearInterval(loopInterval);
         } else if (pointStart > pointEnd) {
             nextSlide();
+            clearInterval(loopInterval);
         }
     });
 
@@ -135,8 +137,10 @@ $(document).ready(function() {
         pointEnd = e.changedTouches[0].pageX;
         if (pointStart < pointEnd) {
             prevSlide();
+            clearInterval(loopInterval);
         } else if (pointStart > pointEnd) {
             nextSlide();
+            clearInterval(loopInterval);
         }
     });
 
