@@ -32,13 +32,13 @@
                 <div class="top-nav-site-wrap">
                     <a href="#" class="top-nav-title">
                         <!-- 로고 영역 -->
-                        <div class="top-nav-logo"><i class="fa-regular fa-face-smile-wink font26"></i></div>
+                        <div class="top-nav-logo"><i class="fa-regular fa-face-smile-wink"></i></div>
                         <!-- 타이틀 영역 -->
-                        <p class="font24">FUNFUN</p>
+                        <p>FUNFUN</p>
                     </a>
                     
                     <!-- 최상단 사이트 메뉴 -->
-                    <div class="top-nav-site-menu font18">
+                    <div class="top-nav-site-menu">
                         <ul>
                             <a href="#"><li>메인</li></a>
                             <a href="#"><li>인기</li></a>
@@ -54,35 +54,58 @@
                 <div class="top-nav-btn-wrap">
                     <!-- 로그인 버튼 -->
                      <div class="top-nav-menu-login">
-                        <div class="login-button font16">
+                        <div class="login-button">
                             <a href="javascript:void(0)">로그인 / 회원가입</a>
                         </div>
                         <div class="login-form-wrap">
                             <form action="#" name="loginField" class="login-form">
+                                <div class="login-form-title">
+                                    <p>로그인 / 회원가입</p>
+                                    <div class="login-form-close" data-focus="top-login-icon">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
                                 <fieldset>
-                                    <legend>로그인</legend>
-                                    <br><button type="button" class="google"><i class="fa-brands fa-google"></i>Log in with Google</button>
-                                    <p class="or">or</p>
-                                    <input type="text" name="id" id="id" placeholder="Username"><br>
-                                    <input type="password" name="pw" id="pw" placeholder="Password"><br>
-                                    <button class="login" onclick="checkLogin()">LOGIN</button>
-                                    <p class="forgot">Forgot your password?</p>
+                                    <input type="text" name="id" id="id" placeholder="Username">
+                                    <input type="password" name="pw" id="pw" placeholder="Password">
+                                    <div class="login-btn-area">
+                                        <p class="forgot">아이디 / 비밀번호 찾기</p>
+                                        <button class="login" onclick="checkLogin()"> 로그인 </button>
+                                    </div>
+                                    <div class="striped">
+                                      <span class="striped-line"></span>
+                                      <span class="striped-text">또는</span>
+                                      <span class="striped-line"></span>
+                                    </div>
+                                    <div class="method">
+                                        <div class="method-control">
+                                          <a href="#" class="method-action">
+                                            <i class="fa-brands fa-google"></i>
+                                            <span>구글 계정으로 로그인</span>
+                                          </a>
+                                        </div>
+                                        <div class="method-control">
+                                          <a href="#" class="method-action">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                            <span>페이스북 계정으로 로그인</span>
+                                          </a>
+                                        </div>
+                                    </div>
                                 </fieldset>
+                                <div class="login-form-bottom">
+                                    <p class="not-member">아직 회원이 아니신가요?</p>
+                                    <a href="./register" class="register"> 회원가입 </a>
+                                </div>
                             </form>
-                            <div class="login-form-close" data-focus="top-login-icon">
-                                <a href="javascript:void(0)">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 <!-- 새 프로젝트 버튼 -->
-                <a class="top-nav-btn-project font16" href="#">프로젝트 만들기</a>
+                <a class="top-nav-btn-project" href="#">프로젝트 만들기</a>
                 </div>
             </div>
         </div>
         <!-- 카테고리 네비게이션 영역 -->
-        <div id="cate-nav" class="font16">
+        <div id="cate-nav">
             <div class="cate-nav-wrap">
                 <div class="cate-title">
                     <ul>
@@ -110,7 +133,7 @@
                     </ul>
                 </div>
                 <!-- 검색버튼 -->
-                 <div class="top-nav-menu-search font16">
+                 <div class="top-nav-menu-search">
                     <div class="search-icon">
                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i><span></span>프로젝트 검색</a>
                     </div>
@@ -156,41 +179,50 @@
                     <section id="section1" class="section-area">
                         <div class="section-wrap">
                             <div class="section-title">
-                                <p class="font24">주제별 추천 프로젝트!</p>
-                                <span class="font16">FunFun에서 선정한 주제별 추천 프로젝트</span>
+                                <p>주제별 추천 프로젝트!</p>
+                                <span>FunFun에서 선정한 주제별 추천 프로젝트</span>
                             </div>
                             <div class="main-cate-project">
                                 <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 / 반복 총 6개 -->
                             </div>
                         </div>
+                        <!-- 사이드 실시간 인기 검색어 화면 -->
                         <aside>
-                            테스트
+                            
                         </aside>
                     </section> <!-- 주제별 프로젝트 목록 끝 -->
                     <hr>
                     <!-- 추천 프로젝트(광고) 영역 -->
                     <section id="section2"  class="section-area">
                         <div class="section-title">
-                            <p class="font24">FunFun's 추천 프로젝트</p>
-                            <span class="font16">당신에게 맞춤추천</span>
+                            <div class="ad-section-title">
+                                <p>FunFun's 추천 프로젝트</p>
+                                <a href="#"><div class="ad-icon">AD</div></a>
+                            </div> 
+                            <span>당신에게 맞춤추천</span>
                         </div>
                         <div class="ad-recommand-projects">
                             <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
                             <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
+                            <div class="trend-project-block">
+                                <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
+                            </div> <!-- 최근 프로젝트 목록  끝 -->
                         </div>
                         <div class="banner">
-                            <img src="https://picsum.photos/1330/200?random=${data.num}">
+                            <a href="#">
+                                <img src="https://picsum.photos/1330/200?random=1">
+                            </a>
                         </div>
                     </section>
                     <hr>
                     <!-- 요즘뜨는 프로젝트 영역 -->
                     <section id="section3" class="section-area">
                         <div class="section-title">
-                            <p class="font24">요즘 뜨고 있는 프로젝트</p>
-                            <span class="font16">지금 핫한 프로젝트들만 모아봤어요</span>
+                            <p>요즘 뜨고 있는 프로젝트</p>
+                            <span>지금 핫한 프로젝트들만 모아봤어요</span>
                         </div>
                         <div class="trend-project">
-                            <p class="trend-project-title font20">
+                            <p class="trend-project-title">
                             오늘 가장 많은 <span class="hashtag">#좋아요</span>를 받은 프로젝트
                             </p>
                             <div class="trend-project-wrap">
@@ -200,7 +232,7 @@
                                     <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
                                 </div> <!-- 최근 프로젝트 목록  끝 -->
                             </div>
-                            <p class="trend-project-title font20">
+                            <p class="trend-project-title">
                             실시간 <span class="hashtag">#급상승</span> 프로젝트!
                             </p>
                             <div class="trend-project-wrap">
@@ -210,7 +242,7 @@
                                     <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
                                 </div> <!-- 최근 프로젝트 목록  끝 -->
                             </div>
-                            <p class="trend-project-title font20">
+                            <p class="trend-project-title">
                             이번주 가장 많은 <span class="hashtag">#FUN</span>을 받은 프로젝트!
                             </p>
                             <div class="trend-project-wrap">
@@ -225,8 +257,8 @@
                     <hr>
                     <section id="section4" class="section-area">
                         <div class="section-title">
-                            <p class="font24">모두 주목! 오픈 예정 프로젝트</p>
-                            <span class="font16">얼리버드 혜택 받아가세요</span>
+                            <p>모두 주목! 오픈 예정 프로젝트</p>
+                            <span>얼리버드 혜택 받아가세요</span>
                         </div>
                         <div class="recent-project">
                             <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
@@ -235,8 +267,8 @@
                     <hr>
                     <section id="section5" class="section-area">
                         <div class="section-title">
-                            <p class="font24">최근 오픈한 프로젝트</p>
-                            <span class="font16">따끈따끈! 방금 오픈한 프로젝트들</span>
+                            <p>최근 오픈한 프로젝트</p>
+                            <span>따끈따끈! 방금 오픈한 프로젝트들</span>
                         </div>
                         <div class="recent-project">
                             <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->

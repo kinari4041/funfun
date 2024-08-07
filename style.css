@@ -53,7 +53,12 @@ header {
     font-weight: bold;
 }
 
+.top-nav-title p {
+    font-size: 26px;
+}
+
 .top-nav-logo {
+    font-size: 28px;
     font-weight: black;
 }
 
@@ -69,6 +74,7 @@ header {
     margin-left: 50px;
     font-weight: 700;
     line-height: 50px;
+    font-size: 18px;
 }
 
 .top-nav-site-menu li::after {
@@ -100,7 +106,395 @@ header {
 
 
 /* ─────────────────────────────────────────────────────────
-                    최상단 메뉴바: 검색 기능
+                최상단 메뉴바: 로그인/가입
+────────────────────────────────────────────────────────── */
+
+.login-button {
+    font-family: "Noto Sans KR", sans-serif;
+    margin-right: 10px;
+    padding: 8px 10px 8px 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid #888;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in;
+}
+
+.login-button:hover {
+    background-color: #ddd;
+}
+
+.top-nav-menu-login .login-form-wrap {
+    opacity: 0;
+    position: relative;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    -webkit-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.top-nav-menu-login .login-form-wrap.login-activate {
+    opacity: 1;
+    visibility: visible;
+}
+
+.top-nav-menu-login .login-form-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin-left: -50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.top-nav-menu-login .login-form-wrap .login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 450px;
+    border: none;
+    display: block;
+    border-radius: 30px;
+    background: #eee;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* ─────────────────────────────────────────────────────────
+                        로그인 화면
+────────────────────────────────────────────────────────── */
+
+.login-form .login-form-title {
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.login-form-close {
+    position: absolute;
+    color:black;
+    right: 20px;
+    top: 13px;
+    font-size: 35px;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.login-form input {
+    background-color: white;
+    height: 60px;
+    width: 80%;
+    border-radius: 50px;
+    padding-left: 30px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.login-btn-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.login-form .forgot {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login-form .forgot:hover {
+    cursor: pointer;
+}
+
+.login-form fieldset {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fa-google {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--color-red);
+}
+
+.fa-facebook-f {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--color-blue);
+}
+
+.striped {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.striped-line {
+    flex: auto;
+    flex-basis: auto;
+    border: none;
+    outline: none;
+    height: 1px;
+    background: var(--color-grayish);
+}
+
+.striped-text {
+    font-weight: bold;
+    line-height: inherit;
+    font-size: 18px;
+    color: var(--color-black);
+    margin: 0 15px;
+}
+
+.method {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.method-control {
+    width: 80%;
+}
+
+.method-action {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: inherit;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 18px 45px;
+    outline: none;
+    border: 2px solid var(--color-grayish);
+    border-radius: 50px;
+    color: var(--color-black);
+    background: var(--color-white);
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.2s ease;
+}
+
+.method-action:hover {
+    background: var(--color-light);
+}
+
+.login-form button.login {
+    display: block;
+    padding: 18px 45px;
+    color: #fff;
+    background-color: rgb(84, 149, 247);
+    box-shadow: var(--shadow-medium);
+    border: 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+.login-form button.login:hover {
+    background-color: rgb(71, 131, 223);
+}
+
+.login-form .login-form-bottom {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: max-content;
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+    padding: 20px 30px;
+}
+
+.login-form-bottom a {
+    display: block;
+    padding: 18px 45px;
+    background-color: rgb(84, 149, 247);
+    border: 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white !important;
+    transition: background-color 0.2s ease;
+}
+
+.register:hover {
+    background-color: rgb(71, 131, 223);
+    cursor: pointer;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                최상단 메뉴바: 새 프로젝트 버튼
+────────────────────────────────────────────────────────── */
+
+.top-nav-btn-project {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                    네비게이션: 카테고리
+────────────────────────────────────────────────────────── */
+
+#cate-nav {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    height: 60px;
+    background: #fff;
+    align-items: center;
+    justify-content: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#cate-nav.active {
+    width: 100%;
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    animation: fadein 0.2s ease-in-out;
+    border-bottom: 1px solid #eee;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.cate-nav-wrap {
+    height: 100%;
+    width: 1330px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cate-title ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+}
+
+.cate-title-desc {
+    margin-top: -2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cate-title-desc i {
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.cate-title-el {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 0px solid #376fc2;
+    transition: all .05s ease;
+    height: 100%;
+}
+
+.cate-title-el:hover {
+    cursor:pointer;
+    color: #376fc2;
+    border-bottom: 5px solid #376fc2;
+}
+
+.cate-item {
+    top: 60;
+    background: #eee;
+    position: absolute;
+    padding: 30px;
+    z-index: 5;
+    width: 100%;
+}
+
+.cate-item-wrap {
+    margin: 0 auto;
+    width: 1330px;
+}
+
+.cate-items {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,150px);
+    row-gap: 25px;
+}
+
+.cate-items a {
+    font-weight: 300;
+}
+
+.cate-items a:hover {
+    font-weight: bold;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                카테고리 네비게이션: 검색 기능
 ────────────────────────────────────────────────────────── */
 
 .top-nav-menu-search .search-form-wrap {
@@ -120,6 +514,7 @@ header {
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
     transition: 0.5s ease;
+    font-size: 16px;
 }
 
 .top-nav-menu-search .search-form-wrap.search-activate {
@@ -192,7 +587,7 @@ header {
     align-items: center;
     margin-right: 20px;
     border-bottom: 0px solid #376fc2;
-    transition: all .1s ease;
+    transition: all .03s ease;
 }
 
 .search-icon:hover {
@@ -203,271 +598,6 @@ header {
 
 .search-icon span {
     margin-left: 10px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-                최상단 메뉴바: 로그인/가입
-────────────────────────────────────────────────────────── */
-
-.login-button {
-    font-family: "Noto Sans KR", sans-serif;
-    margin-right: 10px;
-    padding: 8px 10px 8px 10px;
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
-    border: 1px solid #888;
-    border-radius: 10px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    transition: all .3s ease-in;
-}
-
-.login-button:hover {
-    background-color: #ddd;
-}
-
-.top-nav-menu-login .login-form-wrap {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 9999;
-    -webkit-transition: opacity 0.5s ease;
-    -o-transition: opacity0.5s ease;
-    transition: opacity 0.5s ease;
-}
-
-.top-nav-menu-login .login-form-wrap.login-activate {
-    opacity: 1;
-    visibility: visible;
-}
-
-.top-nav-menu-login .login-form-wrap .login-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    margin-left: -50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-}
-
-.top-nav-menu-login .login-form-wrap .login-form .login-field {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding: 20px;
-    width: 80%;
-    height: 70px;
-    display: block;
-    margin: 0 auto;
-    border: none;
-    border-bottom: 1px solid #e1e1e1;
-    border-radius: 70px;
-}
-
-.top-nav-menu-login .login-form-wrap .login-form .login-submit {
-    margin-top: 30px;
-    padding: 16px 60px;
-    background: #333;
-    border: none;
-    color: #fff;
-    display: inline-block;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-}
-
-.top-nav-menu-login .login-form-wrap .login-form .login-submit:hover {
-    border-radius: 30px;
-}
-
-.login-form-close {
-    position: absolute;
-    color:white;
-    right: 40px;
-    top: 30px;
-    font-size: 64px;
-    cursor: pointer;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-                        로그인 화면
-────────────────────────────────────────────────────────── */
-
-.login-form form {
-    display: flex;
-    text-align: center;
-    align-items: center;
-}
-
-.login-form p.or {
-    font-weight: bold;
-}
-
-.login-form p.forgot {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.login-form button.google {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 50px;
-    font-weight: bold;
-}
-
-.login-form button.login {
-    display: block;
-    width: 300px;
-    height: 50px;
-    color: white;
-    background-color: black;
-    border: 0;
-}
-
-.login-form input {
-    background-color: lightgrey;
-    width: 90%;
-    height: 50px;
-    border: 0;
-    border-radius: 10px;
-    padding-left: 15px;
-    margin-bottom: 20px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-                최상단 메뉴바: 새 프로젝트 버튼
-────────────────────────────────────────────────────────── */
-
-.top-nav-btn-project {
-    font-family: "Noto Sans KR", sans-serif;
-    padding: 10px 15px 10px 15px;
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-                    네비게이션: 카테고리
-────────────────────────────────────────────────────────── */
-
-#cate-nav {
-    position: relative;
-    display: flex;
-    margin: 0 auto;
-    height: 60px;
-    background: #fff;
-    align-items: center;
-    justify-content: left;
-    font-weight: bold;
-}
-
-#cate-nav.active {
-    width: 100%;
-    z-index: 7;
-    position: fixed;
-    top: 0;
-    animation: fadein 0.2s ease-in-out;
-    border-bottom: 1px solid #eee;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
-}
-
-.cate-nav-wrap {
-    height: 100%;
-    width: 1330px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cate-title ul {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    height: 100%;
-}
-
-.cate-title-desc {
-    margin-top: -2px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.cate-title-desc i {
-    font-size: 20px;
-    margin-top: 3px;
-}
-
-.cate-title-el {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    border-bottom: 0px solid #376fc2;
-    transition: all .1s ease;
-    height: 100%;
-}
-
-.cate-title-el:hover {
-    cursor:pointer;
-    color: #376fc2;
-    border-bottom: 5px solid #376fc2;
-}
-
-.cate-item {
-    top: 60;
-    background: #eee;
-    position: absolute;
-    padding: 30px;
-    z-index: 5;
-    width: 100%;
-}
-
-.cate-item-wrap {
-    margin: 0 auto;
-    width: 1330px;
-}
-
-.cate-items {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(6,150px);
-    row-gap: 25px;
-}
-
-.cate-items a {
-    font-weight: 300;
-}
-
-.cate-items a:hover {
-    font-weight: bold;
 }
 
 
@@ -510,19 +640,27 @@ section {
 }
 
 .section-title {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
     margin-top: 30px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
 .section-title p {
-    margin-left: 30px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.section-title span {
+    font-size: 16px;
+}
+
+.section-title p:after {
+    font-family: "Font Awesome\ 5 Free";
+    content: '\f054';
+    margin-left: 8px;
     font-weight: bold;
 }
 
 .section-title span {
-    margin-left: 30px;
     padding-top: 20px;
 }
 
@@ -540,7 +678,7 @@ section {
 }
 
 #section1 .section-wrap {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 #section1 .section-title {
@@ -572,16 +710,18 @@ aside {
 
 /* 금주의 인기 프로젝트! 영역 스타일 */
 .slide-title {
+    font-family: "Noto Sans KR", sans-serif;
     position: absolute;
     top: 20px;
     left: 30px;
+    font-size: 20px;
     padding: 10px 15px 10px 15px;
     border-radius: 10px;
     background-color: #fff;
     color:#000;
     font-weight: bold;
     z-index: 3;
-    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-medium);
 }
 
 /* 슬라이드에 들어가는 각 div의 스타일 적용 */
@@ -644,7 +784,7 @@ aside {
     border-radius: 10px;
     padding: 12px;
     background-color: #fff;
-    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-medium);
 }
 
 /* 현재 페이지를 알려주는 ui 스타일 */
@@ -654,7 +794,7 @@ aside {
     background-color: #fff;
     color:#000;
     font-weight: bold;
-    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-medium);
 }
 
 
@@ -665,7 +805,7 @@ aside {
 .main-cate-project {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    padding: 30px 40px 30px 20px;
+    padding: 30px 40px 30px 0px;
     column-gap: 60px;
     row-gap: 30px;
 }
@@ -686,7 +826,7 @@ aside {
 
 .project-cate-thumb-wrap:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-large);
 }
 
 .project-cate {
@@ -789,12 +929,27 @@ aside {
 
 .ad-recommand-projects {
     position: relative;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     height: 300px;
     width: 100%;
     display: grid;
     border-radius: 30px;
+}
+
+.ad-section-title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.ad-icon {
+    color: #ccc;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 3px 7px 3px 7px;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 .banner {
@@ -814,6 +969,7 @@ aside {
     padding-bottom: 30px;
     column-gap: 30px;
     row-gap: 30px;
+    width: 100%;
 }
 
 .trend-project-wrap {
@@ -826,7 +982,7 @@ aside {
     overflow: hidden;
     margin-bottom: 50px;
     overflow-x: scroll;
-    padding: 10px;
+    padding: 10px 10px 10px 0;
 }
 
 .trend-project-block::-webkit-scrollbar {
@@ -863,6 +1019,7 @@ aside {
 .trend-project-title {
     margin-top: 30px;
     margin-bottom: 20px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -885,7 +1042,7 @@ aside {
     height: 60px;
     border-radius: 15px;
     cursor: pointer;
-    box-shadow: 3px 5px 2px 0px rgba(83, 83, 83, 0.4);
+    box-shadow: var(--shadow-bold);
 }
 
 .trend-project-btn.right{
@@ -914,8 +1071,8 @@ aside {
 .recent-project {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    padding-top: 50px;
-    padding-bottomccccccccccccccccccccccccccccccccccccccccccccccc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  : 50px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     column-gap: 30px;
     row-gap: 30px;
 }
@@ -931,7 +1088,7 @@ aside {
 
 .recent-project-list:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-large)
 }
 
 .recent-project-thumb {
