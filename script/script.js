@@ -31,6 +31,19 @@ $(document).ready(function() {
         });
     })
 
+    $(function () {
+        $('.search-submit').click(function() {
+            let searchValue = $('.search-field').val();
+            if (searchValue.length > 1) {
+                location.href = "/search/" + searchValue + "/";
+            } else {
+                alert("입력한 단어가 너무 짧거나 없습니다.");
+                $('input[type="search"]').focus();
+                return false;
+            }
+        })
+    })
+    
 
     // ----------------------------------------------------------------
     //                          로그인 팝업
@@ -86,14 +99,14 @@ $(document).ready(function() {
             const template = `
                 <div class="project-cate-wrap">
                     <div class="project-subject">
-                        <p class="project-subject-title font16"><i class="${data.icon} font22"></i>${data.category}</p>
-                        <a class="project-subject-more font16" href="#">더 보기</p>
+                        <p class="project-subject-title"><i class="${data.icon}"></i>${data.category}</p>
+                        <a class="project-subject-more" href="#">더 보기</p>
                     </div>
                     <a class="project-cate-thumb-wrap" href="/projects">
                         <div class="project-cate-thumb"> <!-- 이미지 썸네일 영역 -->
                             <img src="https://picsum.photos/400/400?random=${data.num}">
                         </div>
-                        <p class="project-cate title font16"> <!-- 프로젝트 제목 영역 -->
+                        <p class="project-cate title"> <!-- 프로젝트 제목 영역 -->
                             ${data.title}
                         </p>
                         <div class="project-cate rate">
@@ -262,42 +275,69 @@ $(document).ready(function() {
         let prevElData;
         // 카테고리 세부 아이템 데이터
         const cateItems = [
-            { id:'반려 동물', title: "펫 의류"},
-            { id:'반려 동물', title: "펫 사료"},
-            { id:'반려 동물', title: "펫 놀이기구"},
-            { id:'반려 동물', title: "펫 관리용품"},
+            { id:'반려 동물', title: "사료"},
+            { id:'반려 동물', title: "간식"},
+            { id:'반려 동물', title: "놀이기구"},
+            { id:'반려 동물', title: "관리용품"},
+            { id:'반려 동물', title: "고양이 모래"},
+            { id:'반려 동물', title: "의류"},
+            { id:'반려 동물', title: "파충류"},
+            { id:'반려 동물', title: "어류"},
+            { id:'반려 동물', title: "기타"},
             { id:'헬스 케어', title: "건강식품"},
-            { id:'헬스 케어', title: "헬스 장비"},
-            { id:'헬스 케어', title: "보충식품"},
+            { id:'헬스 케어', title: "헬스 기구"},
+            { id:'헬스 케어', title: "보충제"},
             { id:'헬스 케어', title: "영양제"},
-            { id:'디지털 미디어', title: "책"},
-            { id:'디지털 미디어', title: "음반"},
+            { id:'헬스 케어', title: "건강식품"},
+            { id:'헬스 케어', title: "스포츠 웨어"},
+            { id:'디지털 미디어', title: "도서"},
+            { id:'디지털 미디어', title: "음악"},
             { id:'디지털 미디어', title: "게임"},
-            { id:'디지털 미디어', title: "컴퓨터"},
-            { id:'향초', title: "향초"},
+            { id:'디지털 미디어', title: "웹툰"},
+            { id:'디지털 미디어', title: "클래스"},
+            { id:'디지털 미디어', title: "아트"},
+            { id:'향초', title: "캔들"},
             { id:'향초', title: "캔들워머"},
             { id:'향초', title: "방향제"},
             { id:'향초', title: "향수/공병"},
-            { id:'커피', title: "원두 커피"},
+            { id:'향초', title: "인센스"},
+            { id:'향초', title: "차량용 방향제"},
+            { id:'향초', title: "디퓨저"},
+            { id:'향초', title: "오일"},
+            { id:'커피', title: "원두"},
             { id:'커피', title: "콜드브루"},
             { id:'커피', title: "커피용품"},
-            { id:'커피', title: "과일청"},
+            { id:'커피', title: "머신"},
+            { id:'커피', title: "캡슐"},
+            { id:'커피', title: "드립커피"},
+            { id:'커피', title: "디카페인"},
             { id:'식품', title: "냉동식품"},
             { id:'식품', title: "안주류"},
             { id:'식품', title: "고기류/육류"},
             { id:'식품', title: "빵/간식"},
-            { id:'뷰티', title: "향수"},
-            { id:'뷰티', title: "메이크업"},
-            { id:'뷰티', title: "비누"},
-            { id:'뷰티', title: "섬유향수"},
+            { id:'식품', title: "비건"},
+            { id:'식품', title: "음료"},
+            { id:'식품', title: "해산물"},
+            { id:'식품', title: "와인"},
+            { id:'식품', title: "전통주"},
+            { id:'식품', title: "요리책"},
+            { id:'식품', title: "푸드 페스티벌"},
             { id:'홈/리빙', title: "침실"},
             { id:'홈/리빙', title: "욕실"},
             { id:'홈/리빙', title: "주방"},
             { id:'홈/리빙', title: "화훼/원예"},
-            { id:'주얼리', title: "반지"},
-            { id:'주얼리', title: "팔찌"},
-            { id:'주얼리', title: "목걸이"},
-            { id:'주얼리', title: "귀걸이"},
+            { id:'홈/리빙', title: "청소/세탁"},
+            { id:'홈/리빙', title: "인테리어"},
+            { id:'홈/리빙', title: "DIY"},
+            { id:'패션', title: "주얼리"},
+            { id:'패션', title: "의류"},
+            { id:'패션', title: "가방"},
+            { id:'패션', title: "신발"},
+            { id:'패션', title: "언더웨어"},
+            { id:'패션', title: "패션소품"},
+            { id:'패션', title: "한복"},
+            { id:'패션', title: "홈웨어"},
+            { id:'패션', title: "키즈"},
             { id:'문구', title: "캘린더"},
             { id:'문구', title: "다이어리"},
             { id:'문구', title: "스티커"},
