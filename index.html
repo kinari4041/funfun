@@ -34,7 +34,7 @@
                         <!-- 로고 영역 -->
                         <div class="top-nav-logo"><i class="fa-regular fa-face-smile-wink"></i></div>
                         <!-- 타이틀 영역 -->
-                        <p>FUNFUN</p>
+                        <h3>FUNFUN</h3>
                     </a>
                     
                     <!-- 최상단 사이트 메뉴 -->
@@ -66,26 +66,28 @@
                                     </div>
                                 </div>
                                 <fieldset>
+                                    <div class="login-message">
+                                    </div>
                                     <input type="text" name="id" id="id" placeholder="Username">
                                     <input type="password" name="pw" id="pw" placeholder="Password">
                                     <div class="login-btn-area">
                                         <p class="forgot">아이디 / 비밀번호 찾기</p>
-                                        <button class="login" onclick="checkLogin()"> 로그인 </button>
+                                        <button class="login"> 로그인 </button>
                                     </div>
-                                    <div class="striped">
-                                      <span class="striped-line"></span>
-                                      <span class="striped-text">또는</span>
-                                      <span class="striped-line"></span>
+                                    <div class="login-stripe">
+                                      <span class="stripe-line"></span>
+                                      <span class="stripe-text">또는</span>
+                                      <span class="stripe-line"></span>
                                     </div>
-                                    <div class="method">
-                                        <div class="method-control">
-                                          <a href="#" class="method-action">
+                                    <div class="login-method">
+                                        <div class="login-method-control">
+                                          <a href="#" class="login-method-action">
                                             <i class="fa-brands fa-google"></i>
                                             <span>구글 계정으로 로그인</span>
                                           </a>
                                         </div>
-                                        <div class="method-control">
-                                          <a href="#" class="method-action">
+                                        <div class="login-method-control">
+                                          <a href="#" class="login-method-action">
                                             <i class="fa-brands fa-facebook-f"></i>
                                             <span>페이스북 계정으로 로그인</span>
                                           </a>
@@ -108,29 +110,21 @@
         <div id="cate-nav">
             <div class="cate-nav-wrap">
                 <div class="cate-title">
-                    <ul>
+                    <div class="cate-title-block">
                         <!-- <li class="cate-title-desc font18">
                             <p>종류</p>
                         </li> -->
-                        <li class="cate-title-el" data-text="식품">
-                            <p>분류1</p>
-                        </li>
-                        <li class="cate-title-el" data-text="커피">
-                            <p>분류2</p>
-                        </li>
-                        <li class="cate-title-el" data-text="향초">
-                            <p>분류항3</p>
-                        </li>
-                        <li class="cate-title-el" data-text="반려 동물">
-                            <p>분류4</p>
-                        </li>
-                        <li class="cate-title-el" data-text="헬스 케어">
-                            <p>분류 항목5</p>
-                        </li>
-                        <li class="cate-title-el" data-text="디지털 미디어">
-                            <p>분류6</p>
-                        </li>
-                    </ul>
+                        <div class="cate-title-el" data-text="식품"><span>식품</span></div>
+                        <div class="cate-title-el" data-text="커피"><span>커피</span></div>
+                        <div class="cate-title-el" data-text="향초"><span>향초</span></div>
+                        <div class="cate-title-el" data-text="반려 동물"><span>반려 동물</span></div>
+                        <div class="cate-title-el" data-text="헬스 케어"><span>헬스케어</span></div>
+                        <div class="cate-title-el" data-text="디지털 미디어"><span>디지털 미디어</span></div>
+                        <div class="cate-title-el" data-text="식품"><span>식품</span></div>
+                        <div class="cate-title-el" data-text="홈/리빙"><span>홈/리빙</span></div>
+                        <div class="cate-title-el" data-text="주얼리"><span>주얼리</span></div>
+                        <div class="cate-title-el" data-text="문구"><span>문구</span></div>
+                    </div>
                 </div>
                 <!-- 검색버튼 -->
                  <div class="top-nav-menu-search">
@@ -279,62 +273,66 @@
         </main>
         <footer>
             <!-- 푸터, 사이트 추가 메뉴 영역 -->
-            <div class="footer-top-area">
+            <div class="footer-menu-wrap">  
                 <!-- 추가 메뉴 영역 -->
-                <div class="footer-menu">   
-                    <!-- 사이트 안내 메뉴 목록 영역 -->
-                    <h3><i class="fa-regular fa-face-smile-wink"></i>FUNFUN</h3>
-                    <div class="footer-menu-list">
-                    <ul>
-                        <li><a href="#">FUNFUN</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">서비스 소개</a></li>
-                        <li><a href="#">광고센터</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">이용안내</a></li>
-                        <li><a href="#">가이드</a></li>
-                        <li><a href="#">창작자 가이드</a></li>
-                        <li><a href="#">수수료 안내</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">정책</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">심사 기준</a></li>
-                        <li><a href="#">이용 정책</a></li>
-                    </ul>
-                </div>
-                    <!-- 메뉴가 추가될 경우 이곳에 추가 -->
-                </div>
-                <!-- 고객 지원센터 영역 -->
-                 <div class="help-center ">
-                    <!-- 지원센터 타이틀 영역 -->
-                    <div class="help-center help-title">
-                        <p>고객 지원센터</p>
-                        <p>상담시간: 평일 00:00 ~ 00:00</p>
-                        <p>(주말, 공휴일 휴무)</p>
+                <div class="footer-top-area">
+                    <div class="footer-top-menu">   
+                        <!-- 사이트 안내 메뉴 목록 영역 -->
+                        <p><i class="fa-regular fa-face-smile-wink"></i>FUNFUN</p>
+                        <ul>
+                            <li><a href="#">FUNFUN</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">서비스 소개</a></li>
+                            <li><a href="#">광고센터</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">가이드</a></li>
+                            <li><a href="#">창작자 가이드</a></li>
+                            <li><a href="#">수수료 안내</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">정책</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">심사 기준</a></li>
+                            <li><a href="#">이용 정책</a></li>
+                        </ul>
+                        <!-- 메뉴가 추가될 경우 이곳에 추가 -->
                     </div>
-                    <!-- 문의하기 버튼 영역 -->
-                    <div class="support-button-area">
-                        <a href="#"> <!-- 문의하기 화면 링크 -->
-                            <div class="btn-support">문의하기</div>
-                        </a>
-                    </div>
-                 </div>
-            </div>
-            <!-- 푸터 하단, 저작권 및 SNS 링크 영역 -->
-            <div class="footer-bottom-area">
-                <!-- 저작권 설명 영역 -->
-                <div class="footer-copyright">
-                    <p>Team 1st FUNFUN Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto, pariatur suscipit laudantium eaque minus repellat repellendus velit a, officia doloremque fugit quibusdam neque optio! Non a quis perspiciatis dolore.</p>
+                    <!-- 고객 지원센터 영역 -->
+                     <div class="help-center ">
+                        <!-- 지원센터 타이틀 영역 -->
+                        <div class="help-title-wrap">
+                            <p class="help-title">고객 지원센터</p>
+                            <p>상담시간: 평일 00:00 ~ 00:00<br>
+                            (주말, 공휴일 휴무)</p>
+                            <!-- 문의하기 버튼 영역 -->
+                            <div class="support-button-area">
+                                <a href="#"> <!-- 문의하기 화면 링크 -->
+                                    <div class="btn-support">문의하기</div>
+                                </a>
+                            </div>
+                        </div>
+                     </div>
                 </div>
-                <!-- SNS 아이콘 목록 영역 -->
-                <div class="social-icons ">
-                    <ul class="social-icon-list">
-                        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    </ul>
+                <div class="sns-stripe">
+                    <span class="stripe-line"></span>
+                    <!-- SNS 아이콘 목록 영역 -->
+                    <div class="social-icons ">
+                        <ul class="social-icon-list">
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                  <span class="stripe-line"></span>
+                </div>
+                <!-- 푸터 하단, 저작권 및 SNS 링크 영역 -->
+                <div class="footer-bottom-area">
+                    <!-- 저작권 설명 영역 -->
+                    <div class="footer-copyright">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque, officiis labore amet nulla saepe mollitia iure aliquid vitae sequi aut nisi earum nobis illo. Fugit provident ratione earum aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio neque aut vitae voluptate voluptatibus nam iure ipsum quasi nobis! Consectetur neque explicabo qui dolorem odio dolore magnam perspiciatis repudiandae!</p>
+                    </div>
                 </div>
             </div>
         </footer>

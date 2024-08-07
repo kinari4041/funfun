@@ -54,7 +54,6 @@ img {
     vertical-align: middle;
 }
 
-/* 이 사이트는 최대 컨텐츠 너비를 1330px로 고정함 */
 body {
     background: #fff;
     height: max-content;
@@ -64,6 +63,7 @@ body {
     font-weight: 300;
     font-family: "Nanum Gothic", sans-serif;
 }
+
 
 /* ─────────────────────────────────────────────────────────
                         공용 소스
@@ -90,6 +90,12 @@ strong {
     display: inline;
 }
 
+.hashtag {
+    color: rgb(83, 83, 255);
+    font-weight: bold;
+}
+
+
 /* ─────────────────────────────────────────────────────────
                     사이트 컬러 리소스
 ────────────────────────────────────────────────────────── */
@@ -113,9 +119,4 @@ strong {
       0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-bold: 0 5px 15px -3px rgba(0, 0, 0, 0.23),
       0 4px 6px -2px rgba(0, 0, 0, 0.23);
-   }
-
-.hashtag {
-    color: rgb(83, 83, 255);
-    font-weight: bold;
 }

@@ -51,15 +51,11 @@ header {
     align-items: center;
     gap: 10px;
     font-weight: bold;
-}
-
-.top-nav-title p {
     font-size: 26px;
 }
 
 .top-nav-logo {
     font-size: 28px;
-    font-weight: black;
 }
 
 .top-nav-site-menu {
@@ -110,24 +106,25 @@ header {
 ────────────────────────────────────────────────────────── */
 
 .login-button {
-    font-family: "Noto Sans KR", sans-serif;
     margin-right: 10px;
     padding: 8px 10px 8px 10px;
     width: fit-content;
     height: fit-content;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1px solid #888;
     border-radius: 10px;
-    display: flex;
-    gap: 10px;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
-    justify-content: center;
-    align-items: center;
-    transition: all .3s ease-in;
+    font-weight: 400;
+    transition: background-color .3s ease-in;
 }
 
 .login-button:hover {
-    background-color: #ddd;
+    background-color: var(--color-light);
 }
 
 .top-nav-menu-login .login-form-wrap {
@@ -174,7 +171,8 @@ header {
     width: 450px;
     border: none;
     display: block;
-    border-radius: 30px;
+    border-radius: 20px;
+    overflow: hidden;
     background: #eee;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -185,8 +183,6 @@ header {
 
 .login-form .login-form-title {
     background-color: white;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
     height: 60px;
     width: 100%;
     font-size: 20px;
@@ -255,7 +251,7 @@ header {
     color: var(--color-blue);
 }
 
-.striped {
+.login-stripe {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -265,7 +261,7 @@ header {
     padding: 0 30px;
 }
 
-.striped-line {
+.stripe-line {
     flex: auto;
     flex-basis: auto;
     border: none;
@@ -274,7 +270,7 @@ header {
     background: var(--color-grayish);
 }
 
-.striped-text {
+.stripe-text {
     font-weight: bold;
     line-height: inherit;
     font-size: 18px;
@@ -282,7 +278,7 @@ header {
     margin: 0 15px;
 }
 
-.method {
+.login-method {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -291,11 +287,11 @@ header {
     gap: 20px;
 }
 
-.method-control {
+.login-method-control {
     width: 80%;
 }
 
-.method-action {
+.login-method-action {
     font-size: 18px;
     font-weight: bold;
     line-height: inherit;
@@ -305,17 +301,13 @@ header {
     align-items: center;
     height: auto;
     padding: 18px 45px;
-    outline: none;
-    border: 2px solid var(--color-grayish);
     border-radius: 50px;
     color: var(--color-black);
     background: var(--color-white);
-    text-transform: capitalize;
-    text-rendering: optimizeLegibility;
     transition: background-color 0.2s ease;
 }
 
-.method-action:hover {
+.login-method-action:hover {
     background: var(--color-light);
 }
 
@@ -342,8 +334,6 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
     height: max-content;
     width: 100%;
     font-size: 20px;
@@ -376,8 +366,9 @@ header {
 
 .top-nav-btn-project {
     font-family: "Noto Sans KR", sans-serif;
-    padding: 10px 15px 10px 15px;
     font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px 10px 15px;
     width: fit-content;
     height: fit-content;
     background-color: white;
@@ -429,11 +420,22 @@ header {
     justify-content: space-between;
 }
 
-.cate-title ul {
+.cate-title {
+    position: relative;
+    width: 1000px;
+}
+
+.cate-title-block {
+    overflow: hidden;
+    overflow-x: scroll;
     display: flex;
     align-items: center;
     gap: 50px;
     height: 100%;
+}
+
+.cate-title-block::-webkit-scrollbar {
+    display: none;
 }
 
 .cate-title-desc {
@@ -450,24 +452,27 @@ header {
 
 .cate-title-el {
     display: flex;
-    gap: 20px;
     align-items: center;
+    justify-content: center;
     border-bottom: 0px solid #376fc2;
-    transition: all .05s ease;
+    transition: border .05s ease;
     height: 100%;
 }
 
 .cate-title-el:hover {
-    cursor:pointer;
     color: #376fc2;
     border-bottom: 5px solid #376fc2;
+}
+
+.cate-title-el span {
+    width: max-content;
 }
 
 .cate-item {
     top: 60;
     background: #eee;
     position: absolute;
-    padding: 30px;
+    padding: 20px;
     z-index: 5;
     width: 100%;
 }
@@ -496,6 +501,33 @@ header {
 /* ─────────────────────────────────────────────────────────
                 카테고리 네비게이션: 검색 기능
 ────────────────────────────────────────────────────────── */
+
+.search-icon {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-bottom: 0px solid #376fc2;
+    transition: all .03s ease;
+}
+
+.search-icon:hover {
+    cursor:pointer;
+    color: #376fc2;
+    border-bottom: 5px solid #376fc2;
+}
+
+.search-icon span {
+    margin-left: 10px;
+}
+
+.top-nav-menu-search {
+    width: max-content;
+}
 
 .top-nav-menu-search .search-form-wrap {
     opacity: 0;
@@ -578,28 +610,6 @@ header {
   cursor: pointer;
 }
 
-.search-icon {
-    font-family: "Noto Sans KR", sans-serif;
-    display: flex;
-    font-weight: 300;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    border-bottom: 0px solid #376fc2;
-    transition: all .03s ease;
-}
-
-.search-icon:hover {
-    cursor:pointer;
-    color: #376fc2;
-    border-bottom: 5px solid #376fc2;
-}
-
-.search-icon span {
-    margin-left: 10px;
-}
-
 
 /* ─────────────────────────────────────────────────────────
                     메인 영역 스타일 설정
@@ -650,7 +660,8 @@ section {
 }
 
 .section-title span {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .section-title p:after {
@@ -658,10 +669,6 @@ section {
     content: '\f054';
     margin-left: 8px;
     font-weight: bold;
-}
-
-.section-title span {
-    padding-top: 20px;
 }
 
 .section-area {
@@ -933,7 +940,6 @@ aside {
     margin-bottom: 50px;
     height: 300px;
     width: 100%;
-    display: grid;
     border-radius: 30px;
 }
 
@@ -1108,52 +1114,58 @@ aside {
 ────────────────────────────────────────────────────────── */
 
 footer {
-    height: 300px;
-    border-top: 2px solid #777;
+    height: fit-content;
+    border-top: 1px solid #eee;
     background-color: white;
 }
 
+.footer-menu-wrap {
+    width: 1330px;
+    margin: 50px auto;
+    margin-bottom: 0;
+}
 
 /* ─────────────────────────────────────────────────────────
                 푸터: 상단 영역 스타일
 ────────────────────────────────────────────────────────── */
 
 .footer-top-area {
-    width: 100%;
-    height: 200px;
     display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
     justify-content: space-between;
 }
 
-.footer-menu {
+.footer-top-menu {
     display: flex;
-    margin-left: 80px;
-    margin-top: 30px;
 }
 
-.footer-menu h3 {
-    font-weight: bold;
+.footer-top-menu p {
+    font-family: "Noto Sans Kr", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.footer-menu a:hover {
+.footer-top-menu a:hover {
     text-decoration: underline;
 }
 
-.footer-menu i {
+.footer-top-menu i {
     margin-right: 10px;
 }
 
-.footer-menu-list {
-    margin-left: 30px;
-}
-
-.footer-menu-list ul {
-    margin-left: 40px;
+.footer-top-menu ul {
+    margin-left: 70px;
+    font-weight: 400;
     display: inline-block;
 }
 
-.footer-menu-list li {
+.footer-top-menu li {
+    font-family: "Noto Sans Kr", sans-serif;
+    font-size: 14px;
     margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 
@@ -1161,8 +1173,81 @@ footer {
                 푸터: 고객 지원센터 안내 영역
 ────────────────────────────────────────────────────────── */
 
-.help-center { 
+.help-title-wrap { 
+    font-family: "Noto Sans Kr", sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
     align-items: right;
+    border-radius: 30px;
+    padding: 20px;
+    border: 2px solid #eee;
+}
+
+.help-title-wrap p {
+    margin-left: 10px;
+}
+
+.help-title {
+    font-size: 18px;
+}
+
+.btn-support {
+    text-align: center;
+    width: 250px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: var(--color-light);
+    transition: background-color 0.2s ease;
+}
+
+.btn-support:hover {
+    background-color: var(--color-grayish);
+}
+
+
+/* ─────────────────────────────────────────────────────────
+               푸터: 하단 SNS 및 구분선 박스
+────────────────────────────────────────────────────────── */
+
+.sns-stripe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0;
+    margin-bottom: 10px;
+}
+
+.sns-stripe.stripe-line {
+    flex: auto;
+    flex-basis: auto;
+    border: none;
+    outline: none;
+    height: 1px;
+    background: var(--color-grayish);
+}
+
+.social-icons ul {
+    margin: 0 25px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons li {
+    color: gray;
+    font-size: 24px;
+    transition: color .3s ease;
+}
+
+.social-icons li:hover {
+    color: var(--color-black)
 }
 
 
@@ -1175,33 +1260,12 @@ footer {
     height: 100px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .footer-copyright {
-    width: 70%;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.social-icons {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-icons li { 
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.social-icons li::after {
-    content: "|";
-    margin-left: 10px;
-}
-
-.social-icons li:last-of-type::after {
-    content: "";
+    font-size: 14px;
 }

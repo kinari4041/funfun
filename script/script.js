@@ -231,6 +231,28 @@ $(document).ready(function() {
         })
     })
 
+    
+    // ----------------------------------------------------------------
+    //                       로그인 체크 양식
+    // ----------------------------------------------------------------
+    
+    $(function () {
+        $('.login').click(function () {
+            if($('input[id="id"]').val().length === 0) {
+                alert("아이디를 입력해주세요.");
+                $('input[id="id"]').focus();
+                return false;
+            } else if ($('input[id="pw"]').val().length === 0) {
+                alert("비밀번호를 입력해주세요.");
+                $('input[id="pw"]').focus();
+                return false;
+            }  else {
+            
+            }
+        });
+    })
+
+
 
     // ----------------------------------------------------------------
     //                       세부 카테고리 목록
@@ -252,14 +274,6 @@ $(document).ready(function() {
             { id:'디지털 미디어', title: "음반"},
             { id:'디지털 미디어', title: "게임"},
             { id:'디지털 미디어', title: "컴퓨터"},
-            { id:'디지털 미디어', title: "책"},
-            { id:'디지털 미디어', title: "음반"},
-            { id:'디지털 미디어', title: "게임"},
-            { id:'디지털 미디어', title: "컴퓨터"},
-            { id:'디지털 미디어', title: "책"},
-            { id:'디지털 미디어', title: "음반"},
-            { id:'디지털 미디어', title: "게임"},
-            { id:'디지털 미디어', title: "컴퓨터"},
             { id:'향초', title: "향초"},
             { id:'향초', title: "캔들워머"},
             { id:'향초', title: "방향제"},
@@ -271,12 +285,28 @@ $(document).ready(function() {
             { id:'식품', title: "냉동식품"},
             { id:'식품', title: "안주류"},
             { id:'식품', title: "고기류/육류"},
-            { id:'식품', title: "빵/간식"}
+            { id:'식품', title: "빵/간식"},
+            { id:'뷰티', title: "향수"},
+            { id:'뷰티', title: "메이크업"},
+            { id:'뷰티', title: "비누"},
+            { id:'뷰티', title: "섬유향수"},
+            { id:'홈/리빙', title: "침실"},
+            { id:'홈/리빙', title: "욕실"},
+            { id:'홈/리빙', title: "주방"},
+            { id:'홈/리빙', title: "화훼/원예"},
+            { id:'주얼리', title: "반지"},
+            { id:'주얼리', title: "팔찌"},
+            { id:'주얼리', title: "목걸이"},
+            { id:'주얼리', title: "귀걸이"},
+            { id:'문구', title: "캘린더"},
+            { id:'문구', title: "다이어리"},
+            { id:'문구', title: "스티커"},
+            { id:'문구', title: "파우치"}
         ];
 
         // 카테고리 세부 목록 DIV 양식
         const template = `
-            <div class="cate-item font14">
+            <div class="cate-item">
                 <div class="cate-item-wrap">
                     <div class="cate-items">
                     </div>
