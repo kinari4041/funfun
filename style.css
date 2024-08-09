@@ -685,7 +685,7 @@ section {
 
 #section1 {
     display: grid;
-    grid-template-columns: 1000px auto;
+    grid-template-columns: 950px auto;
 }
 
 #section1 .section-wrap {
@@ -694,12 +694,6 @@ section {
 
 #section1 .section-title {
     margin-top: 0;
-}
-
-aside {
-    width: 250px;
-    height: 100%;
-    border-left: 1px solid #eee;
 }
 
 
@@ -810,7 +804,122 @@ aside {
 
 
 /* ─────────────────────────────────────────────────────────
-                섹션1: 주제별 추천 프로젝트
+                섹션1 사이드 뜨고있는 팀 순위
+────────────────────────────────────────────────────────── */
+
+aside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #eee;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.aside-title {
+    text-align: center;
+    font-size: 22px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    margin: 35px 10px;
+    padding: 12px 0;
+    border-radius: 50px;
+    border-bottom: 3px solid #ddd;
+}
+
+.aside-title i {
+    margin-right: 15px;
+}
+
+aside ul {
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+aside ul > li {
+    background-color: transparent;
+    perspective: 1000px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+aside ul > li .rank-items {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+}
+
+aside li:hover .rank-items {
+    transform: rotateX(180deg);
+}
+
+.rank-items__front, .rank-items__back { 
+    position: absolute;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.rank-items__front {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.rank-items__back {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: rotateX(180deg);
+    background-color: #eee;
+}
+
+.rank-number {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.rank-title {
+    width: 82%;
+    margin-right: 10px;
+    text-align: right;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rank-items__back .rank-number {
+    display: none;
+}
+
+.rank-items__back .rank-title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.aside-ad {
+    margin: 40px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    height: 230px;
+}
+
+/* ─────────────────────────────────────────────────────────
+                    주제별 추천 프로젝트
 ────────────────────────────────────────────────────────── */
 
 .main-cate-project {
@@ -840,10 +949,172 @@ aside {
     box-shadow: var(--shadow-large);
 }
 
+
+/* ─────────────────────────────────────────────────────────
+                광고, 추천 프로젝트 섹션
+────────────────────────────────────────────────────────── */
+
+.ad-recommand-projects {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.ad-section-title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.ad-icon {
+    color: #ccc;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 3px 7px 3px 7px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.banner {
+    height: 200px;
+    width: 1330px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+
+.trend-project {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
+    width: 100%;
+}
+
+.trend-project hr {
+    margin: 20px 0;
+}
+
+.trend-project-wrap {
+    position: relative;
+}
+
+.trend-project-block {
+    overflow-x: scroll;
+}
+
+.trend-project-block::-webkit-scrollbar {
+    display:none;
+}
+
+.trend-project-list {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    margin-bottom: 50px;
+    padding: 10px 10px 10px 0;
+}
+
+.trend-project-list .list-project-wrap {
+    width: 200px;
+}
+
+.trend-project-list:last-child {
+    margin-bottom: 0;
+}
+
+.trend-project-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.trend-project-title:first-child {
+    margin-top: 0;
+}
+
+.trend-project-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #000;
+    background-color: #fff;
+    width: 40px;
+    height: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: var(--shadow-bold);
+}
+
+.trend-project-btn.right{
+    right: -20px;
+}
+
+.trend-project-btn.left{
+    left: -20px;
+}
+
+.trend-project-btn i {
+    margin-top: 1px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+        오픈예정, 최근 프로젝트 2줄 그리드 섹션 리스트
+────────────────────────────────────────────────────────── */
+
+.list-page {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 40px;
+    padding-bottom: 50px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.list-project-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    cursor: pointer;
+    border: 5px solid #00000000;
+    transition: border .2s ease-in-out;
+}
+
+.list-project-wrap:hover {
+    border: 5px solid #bbb;
+}
+
+.recent-project-thumb {
+    margin-bottom: 10px;
+}
+
+.list-project-wrap img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+                    프로젝트 썸네일 스타일
+────────────────────────────────────────────────────────── */
+
 .project-cate {
-    margin-left: 10px;
     margin-bottom: 5px;
     width: 100%;
+    margin-left: 5px;
 }
 
 .project-cate-thumb {
@@ -870,7 +1141,7 @@ aside {
     overflow: hidden;
     word-break: break-word;
     line-height: 30px;
-    padding-right: 8px;
+    width: 100%;
     
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -901,7 +1172,7 @@ aside {
 .project-cate-rate.star {
     color: rgb(226, 58, 7);
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .project-cate.desc {
@@ -940,185 +1211,6 @@ aside {
 
 
 /* ─────────────────────────────────────────────────────────
-                섹션2: 광고, 추천 프로젝트
-────────────────────────────────────────────────────────── */
-
-.ad-recommand-projects {
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    height: 300px;
-    width: 100%;
-    border-radius: 30px;
-}
-
-.ad-section-title {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.ad-icon {
-    color: #ccc;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 3px 7px 3px 7px;
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.banner {
-    height: 200px;
-    width: 1330px;
-    border-radius: 10px;
-    margin-bottom: 60px;
-    overflow: hidden;
-}
-
-/* ─────────────────────────────────────────────────────────
-                섹션3: 최근 오픈한 프로젝트
-────────────────────────────────────────────────────────── */
-
-.trend-project {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    column-gap: 30px;
-    row-gap: 30px;
-    width: 100%;
-}
-
-.trend-project-wrap {
-    position: relative;
-}
-
-.trend-project-block {
-    display: flex;
-    gap: 30px;
-    overflow: hidden;
-    margin-bottom: 50px;
-    overflow-x: scroll;
-    padding: 10px 10px 10px 0;
-}
-
-.trend-project-block::-webkit-scrollbar {
-    display:none;
-}
-
-.trend-project-block:last-child {
-    margin-bottom: 0;
-}
-
-.trend-project-list {
-    display: flex;
-    flex-direction: column;
-    transition: all .2s ease-in-out;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.trend-project-list:hover {
-    background-color: #ddd;
-}
-
-.trend-project-thumb {
-    margin-bottom: 10px;
-}
-
-.trend-project-thumb img {
-    border-radius: 20px;
-    width: 200px;
-    height: 150px;
-}
-
-.trend-project-title {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.trend-project-title:first-child {
-    margin-top: 0;
-}
-
-.trend-project-btn {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 25px;
-    color: #000;
-    background-color: #fff;
-    width: 40px;
-    height: 60px;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: var(--shadow-bold);
-}
-
-.trend-project-btn.right{
-    right: 20px;
-}
-
-.trend-project-btn.left{
-    left: 20px;
-}
-
-.trend-project-btn i {
-    margin-top: 1px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-                섹션4: 최근 오픈 예정 프로젝트
-────────────────────────────────────────────────────────── */
-
-
-
-/* ─────────────────────────────────────────────────────────
-                섹션5: 최근 오픈한 프로젝트
-────────────────────────────────────────────────────────── */
-
-.recent-project {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    padding-top: 40px;
-    padding-bottom: 50px;
-    column-gap: 30px;
-    row-gap: 30px;
-}
-
-.recent-project-list {
-    display: flex;
-    flex-direction: column;
-    transition: all .2s ease-in-out;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.recent-project-list:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-large)
-}
-
-.recent-project-thumb {
-    margin-bottom: 10px;
-}
-
-.recent-project-thumb img {
-    border-radius: 20px;
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-
-/* ─────────────────────────────────────────────────────────
                          푸터
 ────────────────────────────────────────────────────────── */
 
@@ -1133,6 +1225,7 @@ footer {
     margin: 50px auto;
     margin-bottom: 0;
 }
+
 
 /* ─────────────────────────────────────────────────────────
                 푸터: 상단 영역 스타일

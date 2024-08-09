@@ -24,7 +24,9 @@
         <title> 펀딩을 재밌게, FUNFUN! </title>
     </head>
     <body>
-        <!-- 헤더 영역 -->
+        <!-- ───────────────────────────────────────────────────────────────────
+                                     헤더  영역
+        ──────────────────────────────────────────────────────────────────── -->
         <header>
             <!-- 최상단 로고/타이틀 및 검색, 로그인 화면 영역 -->
             <div id="top-nav">
@@ -36,7 +38,6 @@
                         <!-- 타이틀 영역 -->
                         <h3>FUNFUN</h3>
                     </a>
-                    
                     <!-- 최상단 사이트 메뉴 -->
                     <div class="top-nav-site-menu">
                         <ul>
@@ -46,10 +47,8 @@
                             <a href="#"><li>오픈예정</li></a>
                             <a href="#"><li>스토어</li></a>
                         </ul>
-                    </div> <!-- 최상단 사이트 메뉴 영역 -->
-                </div> <!-- 최상단 타이틀 영역 -->
-                
-                    
+                    </div> <!-- 최상단 사이트 메뉴 종료 -->
+                </div> 
                 <!-- 최상단 메뉴 영역 -->
                 <div class="top-nav-btn-wrap">
                     <!-- 로그인 버튼 -->
@@ -103,7 +102,7 @@
                     </div>
                 <!-- 새 프로젝트 버튼 -->
                 <a class="top-nav-btn-project" href="#">프로젝트 만들기</a>
-                </div>
+                </div> <!-- 최상단 메뉴 영역 종료 --> 
             </div>
         </div>
         <!-- 카테고리 네비게이션 영역 -->
@@ -120,7 +119,6 @@
                         <div class="cate-title-el" data-text="반려 동물"><span>반려 동물</span></div>
                         <div class="cate-title-el" data-text="헬스 케어"><span>헬스케어</span></div>
                         <div class="cate-title-el" data-text="디지털 미디어"><span>디지털 미디어</span></div>
-                        <div class="cate-title-el" data-text="식품"><span>식품</span></div>
                         <div class="cate-title-el" data-text="홈/리빙"><span>홈/리빙</span></div>
                         <div class="cate-title-el" data-text="패션"><span>패션</span></div>
                         <div class="cate-title-el" data-text="문구"><span>문구</span></div>
@@ -146,16 +144,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </header> <!-- 헤더 영역 종료 -->
-
-        <!-- 메인 화면 영역 -->
+        </div> <!-- 카테고리 네비게이션 영역 종료 -->
+        </header>
+        <!-- ───────────────────────────────────────────────────────────────────
+                                    메인 영역
+        ──────────────────────────────────────────────────────────────────── -->
         <main>
-            <!-- 주제별 프로젝트, 사이드바, 최근 프로젝트 묶는 영역 -->
+            <!-- 섹션 묶는 영역 -->
             <div id="section-content">
                 <div id="section-content-wrap">
+                    <!-- 금주 인기 프로젝트 영역 -->
                     <section id="popular" class="section-area">
-                        <!-- 금주 인기 프로젝트 영역 -->
                         <div class="popular-projects">
                             <p class="slide-title">금주의 인기 프로젝트!</p>
                             <div class="slide-item item1"></div>
@@ -170,6 +169,7 @@
                             </div>
                         </div>
                     </section>
+                    <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 -->
                     <section id="section1" class="section-area">
                         <div class="section-wrap">
                             <div class="section-title">
@@ -177,14 +177,19 @@
                                 <span>FunFun에서 선정한 주제별 추천 프로젝트</span>
                             </div>
                             <div class="main-cate-project">
-                                <!-- 주제별 프로젝트 랜덤 뷰 목록 영역 / 반복 총 6개 -->
+                                
                             </div>
                         </div>
                         <!-- 사이드 실시간 인기 검색어 화면 -->
                         <aside>
-                            
+                            <p class="aside-title"><i class="fa-solid fa-ranking-star"></i>실시간 프로젝트 랭킹</p>
+                            <ul class="rank-wrap">
+                            </ul>
+                            <div class="aside-ad">
+                                <p>AD AREA</p>
+                            </div>
                         </aside>
-                    </section> <!-- 주제별 프로젝트 목록 끝 -->
+                    </section>
                     <hr>
                     <!-- 추천 프로젝트(광고) 영역 -->
                     <section id="section2"  class="section-area">
@@ -198,14 +203,11 @@
                         <div class="ad-recommand-projects">
                             <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
                             <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
-                            <div class="trend-project-block">
-                                <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                            </div> <!-- 최근 프로젝트 목록  끝 -->
+                            <div class="trend-project-block" data-section="recommand">
+                                <div class="trend-project-list ad-projects"></div></div>
                         </div>
                         <div class="banner">
-                            <a href="#">
-                                <img src="https://picsum.photos/1330/200?random=1">
-                            </a>
+                            <p>AD AREA</p>
                         </div>
                     </section>
                     <hr>
@@ -216,63 +218,65 @@
                             <span>지금 핫한 프로젝트들만 모아봤어요</span>
                         </div>
                         <div class="trend-project">
-                            <p class="trend-project-title">
-                            오늘 가장 많은 <span class="hashtag">#좋아요</span>를 받은 프로젝트
-                            </p>
                             <div class="trend-project-wrap">
+                                <p class="trend-project-title">
+                                오늘 가장 많은 <span class="hashtag">#좋아요</span>를 받은 프로젝트
+                                </p>
                                 <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
                                 <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
-                                <div class="trend-project-block">
-                                    <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                                </div> <!-- 최근 프로젝트 목록  끝 -->
+                                <div class="trend-project-block" data-section="trend-like">
+                                    <div class="trend-project-list"></div>
+                                </div>
                             </div>
-                            <p class="trend-project-title">
-                            실시간 <span class="hashtag">#급상승</span> 프로젝트!
-                            </p>
+                            <hr>
                             <div class="trend-project-wrap">
+                                <p class="trend-project-title">
+                                실시간 <span class="hashtag">#인기</span> 프로젝트!
+                                </p>
                                 <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
                                 <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
-                                <div class="trend-project-block">
-                                    <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                                </div> <!-- 최근 프로젝트 목록  끝 -->
+                                <div class="trend-project-block" data-section="trend-high">
+                                    <div class="trend-project-list"></div></div>
                             </div>
-                            <p class="trend-project-title">
-                            이번주 가장 많은 <span class="hashtag">#FUN</span>을 받은 프로젝트!
-                            </p>
+                            <!-- <hr>
                             <div class="trend-project-wrap">
+                                <p class="trend-project-title">
+                                [고객]님이 관심있는 <span class="hashtag">#키워드</span>에 대한 프로젝트!
+                                </p>
                                 <span class="trend-project-btn right"><i class="fa-solid fa-angle-right"></i></span>
                                 <span class="trend-project-btn left"><i class="fa-solid fa-angle-left"></i></span>
-                                <div class="trend-project-block">
-                                    <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                                </div> <!-- 최근 프로젝트 목록  끝 -->
-                            </div>
+                                <div class="trend-project-block" data-section="trend-fun">
+                                    <div class="trend-project-list"></div>
+                                </div>
+                            </div> -->
                         </div>
                     </section>
                     <hr>
+                    <!-- 오픈예정 프로젝트 영역 -->
                     <section id="section4" class="section-area">
                         <div class="section-title">
                             <p>모두 주목! 오픈 예정 프로젝트</p>
                             <span>얼리버드 혜택 받아가세요</span>
                         </div>
-                        <div class="recent-project">
-                            <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                        </div> <!-- 최근 프로젝트 목록  끝 -->
+                        <div class="list-page" data-section="scheduled"></div>
                     </section>
                     <hr>
+                    <!-- 최근 오픈 프로젝트 영역 -->
                     <section id="section5" class="section-area">
                         <div class="section-title">
                             <p>최근 오픈한 프로젝트</p>
                             <span>따끈따끈! 방금 오픈한 프로젝트들</span>
                         </div>
-                        <div class="recent-project">
-                            <!-- 최근 프로젝트 목록 영역 / 반복 최대 10개 -->
-                        </div> <!-- 최근 프로젝트 목록  끝 -->
+                        <div class="list-page" data-section="recent"></div>
                     </section>
                 </div>
             </div> 
         </main>
+        <!-- ───────────────────────────────────────────────────────────────────
+                                    푸터 영역
+        ──────────────────────────────────────────────────────────────────── -->
         <footer>
-            <!-- 푸터, 사이트 추가 메뉴 영역 -->
+            <!-- 사이트 추가 메뉴 영역 -->
             <div class="footer-menu-wrap">  
                 <!-- 추가 메뉴 영역 -->
                 <div class="footer-top-area">

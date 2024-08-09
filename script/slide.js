@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // queryselect로 슬라이드를 구현할 요소 선택하여 크기 구하기
-    const slide = document.querySelector(".popular-projects")
+    const slide = document.querySelector(".popular-projects");
     const transitionTime = 0.8;
     let slideWidth = slide.clientWidth;
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
     });
 
     // 다음 슬라이드로 넘기는 메서드
-    function nextSlide() {
+    const nextSlide = () => {
         nowSlide++;
         if (nowSlide <= maxSlide) {
             const offset = slideWidth * nowSlide;
@@ -72,7 +72,7 @@ $(document).ready(function() {
     }
 
     // 이전 슬라이드로 넘기는 메서드
-    function prevSlide() {
+    const prevSlide = () => {
         nowSlide--;
 
         if (nowSlide > 0) {
@@ -114,6 +114,7 @@ $(document).ready(function() {
     let pointStart = 0;
     let pointEnd = 0;
 
+    // pc 드래그 이벤트
     slide.addEventListener("mousedown", (e) => {
         pointStart = e.pageX;
     });
@@ -129,6 +130,7 @@ $(document).ready(function() {
         }
     });
 
+    // 모바일 터치
     slide.addEventListener("touchstart", (e) => {
         pointStart = e.touches[0].pageX;
     });
@@ -144,14 +146,17 @@ $(document).ready(function() {
         }
     });
 
+    // 슬라이드 넘어가는 인터벌
     let loopInterval = setInterval(() => {
         nextSlide();
     }, 5000);
 
+    // 슬라이드에 마우스 올렸을때 정지
     slide.addEventListener("mouseover", () => {
         clearInterval(loopInterval);
     });
 
+    // 슬라이드에서 마우스가 벗어났을때 다시 타이머 시작
     slide.addEventListener("mouseout", () => {
         loopInterval = setInterval(() => {
             nextSlide();
