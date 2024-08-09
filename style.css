@@ -1371,3 +1371,14 @@ footer {
     justify-content: center;
     font-size: 14px;
 }
+
+
+/* ─────────────────────────────────────────────────────────
+                    임시! 광고 안내문구
+────────────────────────────────────────────────────────── */
+
+.aside-ad p, .banner p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ccc;
+}
